@@ -1239,6 +1239,7 @@ macro (enable_pch HEADER_PATHNAME)
                         COMMAND ${CMAKE_COMMAND} -E touch ${HEADER_FILENAME}.${CONFIG}.pch.trigger
                         DEPENDS ${ABS_PATH_PCH}.${CONFIG}.pch.rsp ${DEPS}
                         COMMENT "Precompiling header file '${HEADER_FILENAME}' for ${CONFIG} configuration")
+                    add_make_clean_files (${PCH_FILENAME}/${PCH_FILENAME}.${CONFIG})
                     set (LAST_CONFIG ${CONFIG})
                 endforeach ()
                 # Determine the dependency list
