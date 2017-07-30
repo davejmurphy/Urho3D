@@ -1,4 +1,4 @@
-cd /d "%~dp0"
+if not %0 == "%~0" cd /d %dp0
 tool/OgreImporter ../SourceAssets/Jack.mesh.xml Data/Models/Jack.mdl -t
 tool/OgreImporter ../SourceAssets/Level.mesh.xml Data/Models/NinjaSnowWar/Level.mdl -t
 tool/OgreImporter ../SourceAssets/Mushroom.mesh.xml Data/Models/Mushroom.mdl -t
