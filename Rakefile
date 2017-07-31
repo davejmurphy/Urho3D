@@ -96,7 +96,7 @@ task :make do
   platform = 'native'
   cmake_build_options = ''
   build_options = ''
-  unfilter = false
+  unfilter = true
   ['config', 'target', 'sdk', 'ARCHS', 'ARGS', 'unfilter', 'verbosity'].each { |var|
     ARGV << "#{var}=\"#{ENV[var]}\"" if ENV[var] && !ARGV.find { |arg| /#{var}=/ =~ arg }
   }
