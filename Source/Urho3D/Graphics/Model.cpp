@@ -37,6 +37,11 @@
 
 #include "../DebugNew.h"
 
+#include "../Gltf/GltfHelper.h"
+
+#define TINYGLTF_IMPLEMENTATION
+#include <tiny_gltf.h>
+
 namespace Urho3D
 {
 
@@ -80,10 +85,38 @@ bool Model::BeginLoad(Deserializer& source)
     String fileID = source.ReadFileID();
     if (fileID != "UMDL" && fileID != "UMD2")
     {
-        URHO3D_LOGERROR(source.GetName() + " is not a valid model file");
-        return false;
-    }
+        if (source.GetName().Contains("gltf", false))
+        {
+            tinygltf::Model gltfModel;
+            std::string errorMessage;
+            tinygltf::TinyGLTF loader;
 
+            if (!loader.LoadASCIIFromFile(&gltfModel, &errorMessage, "C:\\Users\\Owner\\Development\\Urho3D\\bin\\Data\\Models\\Suzanne.gltf"))
+            {
+                const auto msg = "Failed to load gltf model" + errorMessage;
+                throw std::exception(msg.c_str());
+            }
+
+            const auto gltfNode = gltfModel.nodes.at(0);
+
+            if (gltfNode.mesh != -1)
+            {
+                const auto gltfMesh = gltfModel.meshes.at(gltfNode.mesh);
+                for (const auto gltfPrimitive : gltfMesh.primitives)
+                {
+                    const auto primitive = GltfHelper::ReadPrimitive(gltfModel, gltfPrimitive);
+                }
+            }
+
+            return false;
+        }
+        else
+        {
+            URHO3D_LOGERROR(source.GetName() + " is not a valid model file");
+            return false;
+        }
+    }
+    
     bool hasVertexDeclarations = (fileID == "UMD2");
 
     geometries_.Clear();
