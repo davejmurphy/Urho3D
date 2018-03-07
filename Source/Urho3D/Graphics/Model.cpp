@@ -99,13 +99,286 @@ bool Model::BeginLoad(Deserializer& source)
 
             const auto gltfNode = gltfModel.nodes.at(0);
 
-            if (gltfNode.mesh != -1)
+            if (true) //gltfNode.mesh != -1)
             {
-                const auto gltfMesh = gltfModel.meshes.at(gltfNode.mesh);
+                GltfHelper::Primitive primitive;
+
+                const auto gltfMesh = gltfModel.meshes.at(0); // gltfNode.mesh);
                 for (const auto gltfPrimitive : gltfMesh.primitives)
                 {
-                    const auto primitive = GltfHelper::ReadPrimitive(gltfModel, gltfPrimitive);
+                    primitive = GltfHelper::ReadPrimitive(gltfModel, gltfPrimitive);
                 }
+
+                geometries_.Clear();
+                geometryBoneMappings_.Clear();
+                geometryCenters_.Clear();
+                morphs_.Clear();
+                vertexBuffers_.Clear();
+                indexBuffers_.Clear();
+
+                unsigned memoryUse = sizeof(Model);
+                bool async = GetAsyncLoadState() == ASYNC_LOADING;
+
+                // Read vertex buffers
+                unsigned numVertexBuffers = 1; // source.ReadUInt();
+                vertexBuffers_.Reserve(numVertexBuffers);
+                morphRangeStarts_.Resize(numVertexBuffers);
+                morphRangeCounts_.Resize(numVertexBuffers);
+                loadVBData_.Resize(numVertexBuffers);
+                for (unsigned i = 0; i < numVertexBuffers; ++i)
+                {
+                    VertexBufferDesc& desc = loadVBData_[i];
+
+                    desc.vertexCount_ = primitive.Vertices.size(); // source.ReadUInt();
+                 
+                    {
+                        // Need to pair up types and sematices for the vertices
+                        desc.vertexElements_.Clear();
+
+                        VertexElementType type1 = VertexElementType::TYPE_VECTOR3;
+                        VertexElementSemantic sem1 = SEM_POSITION;
+                        unsigned char index1 = 0;
+                        desc.vertexElements_.Push(VertexElement(type1, sem1, index1));
+
+                        VertexElementType type2 = VertexElementType::TYPE_VECTOR3;
+                        VertexElementSemantic sem2 = SEM_NORMAL;
+                        unsigned char index2 = 0;
+                        desc.vertexElements_.Push(VertexElement(type2, sem2, index2));
+
+                        VertexElementType type3 = VertexElementType::TYPE_VECTOR4;
+                        VertexElementSemantic sem3 = SEM_TANGENT;
+                        unsigned char index3 = 0;
+                        desc.vertexElements_.Push(VertexElement(type3, sem3, index3));
+
+                        VertexElementType type4 = VertexElementType::TYPE_VECTOR2;
+                        VertexElementSemantic sem4 = SEM_TEXCOORD;
+                        unsigned char index4 = 0;
+                        desc.vertexElements_.Push(VertexElement(type4, sem4, index4));
+                    }
+
+                    SharedPtr<VertexBuffer> buffer(new VertexBuffer(context_));
+                    unsigned vertexSize = VertexBuffer::GetVertexSize(desc.vertexElements_);
+                    desc.dataSize_ = desc.vertexCount_ * vertexSize;
+
+                    // Prepare vertex buffer data to be uploaded during EndLoad()
+                    if (async)
+                    {
+                        desc.data_ = new unsigned char[desc.dataSize_];
+                        source.Read(desc.data_.Get(), desc.dataSize_);
+                    }
+                    else
+                    {
+                        // If not async loading, use locking to avoid extra allocation & copy
+                        desc.data_.Reset(); // Make sure no previous data
+                        buffer->SetShadowed(true);
+                        buffer->SetSize(desc.vertexCount_, desc.vertexElements_);
+                        void* dest = buffer->Lock(0, desc.vertexCount_);
+
+                        float* destfloat = static_cast<float *>(dest);
+
+                        int current = 0;
+                        // Need to read everything out of the vertex infor into the void* dest
+                        for (int i = 0; i < primitive.Vertices.size(); i++)
+                        {
+                            auto vertex = primitive.Vertices.at(i);
+
+                            Vector3 pos{ vertex.Position.x, vertex.Position.y, vertex.Position.z };
+                            Vector3 normal{ vertex.Normal.x, vertex.Normal.y, vertex.Normal.z };
+                            Vector4 tangent{ vertex.Tangent.x, vertex.Tangent.y, vertex.Tangent.z, vertex.Tangent.w };
+                            Vector2 texcoord{ vertex.TexCoord0.x, vertex.TexCoord0.y };
+
+                            memcpy(&destfloat[current], static_cast<void*>(&pos), sizeof(pos));
+                            current += 3;
+                            memcpy(&destfloat[current], static_cast<void*>(&normal), sizeof(normal));
+                            current += 3;
+                            memcpy(&destfloat[current], static_cast<void*>(&tangent), sizeof(tangent));
+                            current += 4;
+                            memcpy(&destfloat[current], static_cast<void*>(&texcoord), sizeof(texcoord));
+                            current += 2;
+                        }
+                        buffer->Unlock();
+                    }
+
+                    memoryUse += sizeof(VertexBuffer) + desc.vertexCount_ * vertexSize;
+                    vertexBuffers_.Push(buffer);
+                }
+
+                // Read index buffers
+                unsigned numIndexBuffers = 1;
+                indexBuffers_.Reserve(numIndexBuffers);
+                loadIBData_.Resize(numIndexBuffers);
+                for (unsigned i = 0; i < numIndexBuffers; ++i)
+                {
+                    unsigned indexCount = primitive.Indices.size();
+                    unsigned indexSize = sizeof(primitive.Indices.at(0));
+
+                    SharedPtr<IndexBuffer> buffer(new IndexBuffer(context_));
+
+                    // Prepare index buffer data to be uploaded during EndLoad()
+                    if (async)
+                    {
+                        loadIBData_[i].indexCount_ = indexCount;
+                        loadIBData_[i].indexSize_ = indexSize;
+                        loadIBData_[i].dataSize_ = indexCount * indexSize;
+                        loadIBData_[i].data_ = new unsigned char[loadIBData_[i].dataSize_];
+                        source.Read(loadIBData_[i].data_.Get(), loadIBData_[i].dataSize_);
+                    }
+                    else
+                    {
+                        // If not async loading, use locking to avoid extra allocation & copy
+                        loadIBData_[i].data_.Reset(); // Make sure no previous data
+                        buffer->SetShadowed(true);
+                        buffer->SetSize(indexCount, indexSize > sizeof(unsigned short));
+                        void* dest = buffer->Lock(0, indexCount);
+
+                        uint32_t* destint = static_cast<uint32_t *>(dest);
+                        int current = 0;
+
+                        for (int i = 0; i < primitive.Indices.size(); i += 3)
+                        {
+                            memcpy(&destint[current], static_cast<void*>(&primitive.Indices.at(i)), sizeof(uint32_t));
+                            memcpy(&destint[current + 1], static_cast<void*>(&primitive.Indices.at(i + 1)), sizeof(uint32_t));
+                            memcpy(&destint[current + 2], static_cast<void*>(&primitive.Indices.at(i + 2)), sizeof(uint32_t));
+                            current += 3;
+                        }
+
+                        //source.Read(dest, indexCount * indexSize);
+                        buffer->Unlock();
+                    }
+
+                    memoryUse += sizeof(IndexBuffer) + indexCount * indexSize;
+                    indexBuffers_.Push(buffer);
+                }
+
+                // Read geometries
+                unsigned numGeometries = 1;
+                geometries_.Reserve(numGeometries);
+                geometryBoneMappings_.Reserve(numGeometries);
+                geometryCenters_.Reserve(numGeometries);
+                loadGeometries_.Resize(numGeometries);
+                for (unsigned i = 0; i < numGeometries; ++i)
+                {
+                    // Read bone mappings
+                    unsigned boneMappingCount = 0; // TODO: Add bones back
+                    PODVector<unsigned> boneMapping(boneMappingCount);
+                    for (unsigned j = 0; j < boneMappingCount; ++j)
+                        boneMapping[j] = source.ReadUInt();
+                    geometryBoneMappings_.Push(boneMapping);
+
+                    unsigned numLodLevels = 1; // TODO: Use actual lod levels
+                    Vector<SharedPtr<Geometry> > geometryLodLevels;
+                    geometryLodLevels.Reserve(numLodLevels);
+                    loadGeometries_[i].Resize(numLodLevels);
+
+                    for (unsigned j = 0; j < numLodLevels; ++j)
+                    {
+                        float distance = 0; // TODO: Read the lod distance
+                        PrimitiveType type = TRIANGLE_LIST; // TODO: Read the geo type from gltf (PrimitiveType)source.ReadUInt();
+
+                        unsigned vbRef = 0; // source.ReadUInt();
+                        unsigned ibRef = 0; // source.ReadUInt();
+                        unsigned indexStart = 0; // source.ReadUInt();
+                        unsigned indexCount = primitive.Indices.size(); // source.ReadUInt();
+
+                        if (vbRef >= vertexBuffers_.Size())
+                        {
+                            URHO3D_LOGERROR("Vertex buffer index out of bounds");
+                            loadVBData_.Clear();
+                            loadIBData_.Clear();
+                            loadGeometries_.Clear();
+                            return false;
+                        }
+                        if (ibRef >= indexBuffers_.Size())
+                        {
+                            URHO3D_LOGERROR("Index buffer index out of bounds");
+                            loadVBData_.Clear();
+                            loadIBData_.Clear();
+                            loadGeometries_.Clear();
+                            return false;
+                        }
+
+                        SharedPtr<Geometry> geometry(new Geometry(context_));
+                        geometry->SetLodDistance(distance);
+
+                        // Prepare geometry to be defined during EndLoad()
+                        loadGeometries_[i][j].type_ = type;
+                        loadGeometries_[i][j].vbRef_ = vbRef;
+                        loadGeometries_[i][j].ibRef_ = ibRef;
+                        loadGeometries_[i][j].indexStart_ = indexStart;
+                        loadGeometries_[i][j].indexCount_ = indexCount;
+
+                        geometryLodLevels.Push(geometry);
+                        memoryUse += sizeof(Geometry);
+                    }
+
+                    geometries_.Push(geometryLodLevels);
+                }
+
+                // Read morphs
+                /*unsigned numMorphs = source.ReadUInt();
+                morphs_.Reserve(numMorphs);
+                for (unsigned i = 0; i < numMorphs; ++i)
+                {
+                    ModelMorph newMorph;
+
+                    newMorph.name_ = source.ReadString();
+                    newMorph.nameHash_ = newMorph.name_;
+                    newMorph.weight_ = 0.0f;
+                    unsigned numBuffers = source.ReadUInt();
+
+                    for (unsigned j = 0; j < numBuffers; ++j)
+                    {
+                        VertexBufferMorph newBuffer;
+                        unsigned bufferIndex = source.ReadUInt();
+
+                        newBuffer.elementMask_ = source.ReadUInt();
+                        newBuffer.vertexCount_ = source.ReadUInt();
+
+                        // Base size: size of each vertex index
+                        unsigned vertexSize = sizeof(unsigned);
+                        // Add size of individual elements
+                        if (newBuffer.elementMask_ & MASK_POSITION)
+                            vertexSize += sizeof(Vector3);
+                        if (newBuffer.elementMask_ & MASK_NORMAL)
+                            vertexSize += sizeof(Vector3);
+                        if (newBuffer.elementMask_ & MASK_TANGENT)
+                            vertexSize += sizeof(Vector3);
+                        newBuffer.dataSize_ = newBuffer.vertexCount_ * vertexSize;
+                        newBuffer.morphData_ = new unsigned char[newBuffer.dataSize_];
+
+                        source.Read(&newBuffer.morphData_[0], newBuffer.vertexCount_ * vertexSize);
+
+                        newMorph.buffers_[bufferIndex] = newBuffer;
+                        memoryUse += sizeof(VertexBufferMorph) + newBuffer.vertexCount_ * vertexSize;
+                    }
+
+                    morphs_.Push(newMorph);
+                    memoryUse += sizeof(ModelMorph);
+                }
+
+                // Read skeleton
+                skeleton_.Load(source);
+                memoryUse += skeleton_.GetNumBones() * sizeof(Bone);*/
+
+                // Read bounding box
+                boundingBox_ = BoundingBox{ Vector3{-1, -1, -1}, Vector3{1, 1, 1} }; //source.ReadBoundingBox();
+
+                // Read geometry centers
+//                for (unsigned i = 0; i < geometries_.Size() && !source.IsEof(); ++i)
+//                    geometryCenters_.Push(source.ReadVector3());
+                while (geometryCenters_.Size() < geometries_.Size())
+                    geometryCenters_.Push(Vector3::ZERO);
+                memoryUse += sizeof(Vector3) * geometries_.Size();
+
+                // Read metadata
+                ResourceCache* cache = GetSubsystem<ResourceCache>();
+                String xmlName = ReplaceExtension(GetName(), ".xml");
+                SharedPtr<XMLFile> file(cache->GetTempResource<XMLFile>(xmlName, false));
+                if (file)
+                    LoadMetadataFromXML(file->GetRoot());
+
+                SetMemoryUse(memoryUse);
+                return true;
             }
 
             return false;
