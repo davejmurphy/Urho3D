@@ -90,7 +90,7 @@ bool Model::BeginLoad(Deserializer& source)
             tinygltf::Model gltfModel;
             std::string errorMessage;
             tinygltf::TinyGLTF loader;
-
+                       
             if (!loader.LoadASCIIFromFile(&gltfModel, &errorMessage, "C:\\Users\\Owner\\Development\\Urho3D\\bin\\Data\\Models\\Suzanne.gltf"))
             {
                 const auto msg = "Failed to load gltf model" + errorMessage;
@@ -104,6 +104,7 @@ bool Model::BeginLoad(Deserializer& source)
                 GltfHelper::Primitive primitive;
 
                 const auto gltfMesh = gltfModel.meshes.at(0); // gltfNode.mesh);
+                // TODO: The .bin file should already be layed out for copying into the vertex/index buffers. So we may not need to read them.
                 for (const auto gltfPrimitive : gltfMesh.primitives)
                 {
                     primitive = GltfHelper::ReadPrimitive(gltfModel, gltfPrimitive);

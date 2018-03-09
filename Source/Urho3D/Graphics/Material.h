@@ -27,6 +27,8 @@
 #include "../Math/Vector4.h"
 #include "../Resource/Resource.h"
 #include "../Scene/ValueAnimationInfo.h"
+#include <tiny_gltf.h>
+#include <memory>
 
 namespace Urho3D
 {
@@ -121,6 +123,9 @@ public:
     virtual bool EndLoad();
     /// Save resource. Return true if successful.
     virtual bool Save(Serializer& dest) const;
+
+    /// Load from an XML element. Return true if successful.
+    bool Load(const tinygltf::Model& source);
 
     /// Load from an XML element. Return true if successful.
     bool Load(const XMLElement& source);
@@ -265,6 +270,8 @@ private:
     bool BeginLoadJSON(Deserializer& source);
     /// Helper function for loading XML files.
     bool BeginLoadXML(Deserializer& source);
+    /// Helper function for loading GLTF files.
+    bool BeginLoadGLTF(Deserializer& source);
 
     /// Reset to defaults.
     void ResetToDefaults();
@@ -323,6 +330,8 @@ private:
     SharedPtr<XMLFile> loadXMLFile_;
     /// JSON file used while loading.
     SharedPtr<JSONFile> loadJSONFile_;
+
+    std::shared_ptr<tinygltf::Model> loadGLTFFile_ = std::make_shared<tinygltf::Model>();
     /// Associated scene for shader parameter animation updates.
     WeakPtr<Scene> scene_;
 };

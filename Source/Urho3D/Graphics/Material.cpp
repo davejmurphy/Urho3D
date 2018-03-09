@@ -45,6 +45,10 @@
 
 #include "../DebugNew.h"
 
+#include "../Gltf/GltfHelper.h"
+
+#include <tiny_gltf.h>
+
 namespace Urho3D
 {
 
@@ -238,6 +242,15 @@ bool Material::BeginLoad(Deserializer& source)
     String extension = GetExtension(source.GetName());
 
     bool success = false;
+    // The beginloadx methods method just preps and creates an xml/json document
+    // The beginloadgltf method could also just do that, or we can load the material in the endload function
+
+    if (extension == ".gltf")
+    {
+        success = BeginLoadGLTF(source);
+        return success;
+    }
+
     if (extension == ".xml")
     {
         success = BeginLoadXML(source);
@@ -271,6 +284,11 @@ bool Material::EndLoad()
         return true;
 
     bool success = false;
+    if (loadGLTFFile_->materials.size() > 0)
+    {
+        success = Load(*loadGLTFFile_);
+    }
+
     if (loadXMLFile_)
     {
         // If async loading, get the techniques / textures which should be ready now
@@ -286,6 +304,7 @@ bool Material::EndLoad()
 
     loadXMLFile_.Reset();
     loadJSONFile_.Reset();
+    loadGLTFFile_.reset();
     return success;
 }
 
@@ -342,6 +361,21 @@ bool Material::BeginLoadXML(Deserializer& source)
     }
 
     return false;
+}
+
+bool Material::BeginLoadGLTF(Deserializer& source)
+{
+    std::string errorMessage;
+    tinygltf::TinyGLTF loader;
+
+    if (!loader.LoadASCIIFromFile(loadGLTFFile_.get(), &errorMessage, "C:\\Users\\Owner\\Development\\Urho3D\\bin\\Data\\Models\\Suzanne.gltf"))
+    {
+        const auto msg = "Failed to load gltf model" + errorMessage;
+        throw std::exception(msg.c_str());
+        return false;
+    }
+
+    return true;
 }
 
 bool Material::BeginLoadJSON(Deserializer& source)
@@ -412,6 +446,41 @@ bool Material::Save(Serializer& dest) const
 
     Save(materialElem);
     return xml->Save(dest);
+}
+
+bool Material::Load(const tinygltf::Model& source)
+{
+    ResetToDefaults();
+
+    ResourceCache* cache = GetSubsystem<ResourceCache>();
+
+    // Load technique
+    Technique* tech = cache->GetResource<Technique>("Techniques/Diff.xml");
+    if (tech)
+    {
+        TechniqueEntry newTechnique;
+        newTechnique.technique_ = newTechnique.original_ = tech;
+//        if (techniqueElem.HasAttribute("quality"))
+//            newTechnique.qualityLevel_ = techniqueElem.GetInt("quality");
+//        if (techniqueElem.HasAttribute("loddistance"))
+//            newTechnique.lodDistance_ = techniqueElem.GetFloat("loddistance");
+        techniques_.Push(newTechnique);
+    }
+
+    SortTechniques();
+    ApplyShaderDefines();
+    // Set textures
+    auto temp = source.images.at(0).uri;
+
+    SetTexture(TU_DIFFUSE, cache->GetResource<Texture2D>("Textures/Suzanne_BaseColor.png"));
+    // Set shader parameters
+    //SetShaderParameter("MatDiffColor", "1 0 0 1");
+    //
+
+    RefreshShaderParameterHash();
+    RefreshMemoryUse();
+
+    return true;
 }
 
 bool Material::Load(const XMLElement& source)
