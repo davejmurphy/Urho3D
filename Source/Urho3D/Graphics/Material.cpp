@@ -368,7 +368,7 @@ bool Material::BeginLoadGLTF(Deserializer& source)
     std::string errorMessage;
     tinygltf::TinyGLTF loader;
 
-    if (!loader.LoadASCIIFromFile(loadGLTFFile_.get(), &errorMessage, "C:\\Users\\Owner\\Development\\Urho3D\\bin\\Data\\Models\\Suzanne.gltf"))
+    if (!loader.LoadASCIIFromFile(loadGLTFFile_.get(), &errorMessage, "C:\\Users\\Owner\\Development\\Urho3D\\bin\\Data\\Models\\Avocado\\Avocado.gltf"))
     {
         const auto msg = "Failed to load gltf model" + errorMessage;
         throw std::exception(msg.c_str());
@@ -456,7 +456,7 @@ bool Material::Load(const tinygltf::Model& source)
 
     techniques_.Clear();
     // Load technique
-    Technique* tech = cache->GetResource<Technique>("Techniques/Diff.xml");
+    Technique* tech = cache->GetResource<Technique>("Techniques/DiffNormal.xml");
     if (tech)
     {
         TechniqueEntry newTechnique;
@@ -469,9 +469,14 @@ bool Material::Load(const tinygltf::Model& source)
     // Set textures
     auto temp = source.images.at(0).uri;
 
-    SetTexture(TU_DIFFUSE, cache->GetResource<Texture2D>("Textures/Suzanne_BaseColor.png"));
+    SetTexture(TU_DIFFUSE, cache->GetResource<Texture2D>("Models/Avocado/Avocado_baseColor.png"));
+    SetTexture(TU_NORMAL, cache->GetResource<Texture2D>("Models/Avocado/Avocado_normal.png"));
+    //SetTexture(TU_EMISSIVE, cache->GetResource<Texture2D>("Models/Helmet/Default_emissive.jpg"));
+    
     // Set shader parameters
-    SetShaderParameter("MatDiffColor", "1 0 0 1");
+    //SetShaderParameter("MatDiffColor", Vector4(1.0f, 1.0f, 1.0f, 1.0f));
+    //SetShaderParameter("MatEmissiveColor", Vector3(1.0f, 1.0f, 1.0f));
+    //SetShaderParameter("Metallic", 0.5f);
 
     RefreshShaderParameterHash();
     RefreshMemoryUse();

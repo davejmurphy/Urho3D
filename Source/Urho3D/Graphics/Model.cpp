@@ -91,7 +91,8 @@ bool Model::BeginLoad(Deserializer& source)
             std::string errorMessage;
             tinygltf::TinyGLTF loader;
                        
-            if (!loader.LoadASCIIFromFile(&gltfModel, &errorMessage, "C:\\Users\\Owner\\Development\\Urho3D\\bin\\Data\\Models\\Suzanne.gltf"))
+            bool isLoaded = loader.LoadASCIIFromFile(&gltfModel, &errorMessage, std::string("C:/Users/Owner/Development/Urho3D/bin/Data/").append(source.GetName().CString()));
+            if (!isLoaded)
             {
                 const auto msg = "Failed to load gltf model" + errorMessage;
                 throw std::exception(msg.c_str());

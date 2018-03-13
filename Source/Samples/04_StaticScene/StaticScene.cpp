@@ -109,10 +109,10 @@ void StaticScene::CreateScene()
         Node* mushroomNode = scene_->CreateChild("Mushroom");
         mushroomNode->SetPosition(Vector3(Random(90.0f) - 45.0f, 0.0f, Random(90.0f) - 45.0f));
         mushroomNode->SetRotation(Quaternion(0.0f, Random(360.0f), 0.0f));
-        mushroomNode->SetScale(0.5f + Random(2.0f));
+        mushroomNode->SetScale(10.0f + Random(2.0f));
         StaticModel* mushroomObject = mushroomNode->CreateComponent<StaticModel>();
-        mushroomObject->SetModel(cache->GetResource<Model>("Models/Suzanne.gltf"));
-        mushroomObject->SetMaterial(cache->GetResource<Material>("Models/Suzanne.gltf"));
+        mushroomObject->SetModel(cache->GetResource<Model>("Models/Avocado/Avocado.gltf"));
+        mushroomObject->SetMaterial(cache->GetResource<Material>("Models/Avocado/Avocado.gltf"));
     }
 
     // Create a scene node for the camera, which we will move around
