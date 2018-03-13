@@ -454,16 +454,13 @@ bool Material::Load(const tinygltf::Model& source)
 
     ResourceCache* cache = GetSubsystem<ResourceCache>();
 
+    techniques_.Clear();
     // Load technique
     Technique* tech = cache->GetResource<Technique>("Techniques/Diff.xml");
     if (tech)
     {
         TechniqueEntry newTechnique;
         newTechnique.technique_ = newTechnique.original_ = tech;
-//        if (techniqueElem.HasAttribute("quality"))
-//            newTechnique.qualityLevel_ = techniqueElem.GetInt("quality");
-//        if (techniqueElem.HasAttribute("loddistance"))
-//            newTechnique.lodDistance_ = techniqueElem.GetFloat("loddistance");
         techniques_.Push(newTechnique);
     }
 
@@ -474,8 +471,7 @@ bool Material::Load(const tinygltf::Model& source)
 
     SetTexture(TU_DIFFUSE, cache->GetResource<Texture2D>("Textures/Suzanne_BaseColor.png"));
     // Set shader parameters
-    //SetShaderParameter("MatDiffColor", "1 0 0 1");
-    //
+    SetShaderParameter("MatDiffColor", "1 0 0 1");
 
     RefreshShaderParameterHash();
     RefreshMemoryUse();
