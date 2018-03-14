@@ -113,8 +113,8 @@ void StaticScene::CreateScene()
         mushroomNode->SetScale(100.0f + Random(2.0f));
         StaticModel* mushroomObject = mushroomNode->CreateComponent<StaticModel>();
         mushroomObject->SetModel(cache->GetResource<Model>("Models/Avocado/Avocado.gltf"));
-        //mushroomObject->ApplyGltfMaterials("Models/Avocado/Avocado.gltf");
-        mushroomObject->SetMaterial(cache->GetResource<Material>("Models/Avocado/Avocado.gltf"));
+        mushroomObject->ApplyGltfMaterials("Models/Avocado/Avocado.gltf");
+        //mushroomObject->SetMaterial(cache->GetResource<Material>("Models/Avocado/Avocado.gltf"));
     }
 
     // Create a scene node for the camera, which we will move around

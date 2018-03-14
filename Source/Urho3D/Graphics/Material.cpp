@@ -474,7 +474,7 @@ bool Material::Load(const tinygltf::Model& source)
     //SetTexture(TU_EMISSIVE, cache->GetResource<Texture2D>("Models/Helmet/Default_emissive.jpg"));
     
     // Set shader parameters
-    //SetShaderParameter("MatDiffColor", Vector4(1.0f, 1.0f, 1.0f, 1.0f));
+    SetShaderParameter("MatDiffColor", Vector4(1.0f, 1.0f, 1.0f, 1.0f));
     //SetShaderParameter("MatEmissiveColor", Vector3(1.0f, 1.0f, 1.0f));
     //SetShaderParameter("Metallic", 0.5f);
 
