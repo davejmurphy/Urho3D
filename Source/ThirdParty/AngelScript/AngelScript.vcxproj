@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F89F95F0-1EAC-3D34-AB64-6D219E04BCBA}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>AngelScript</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AngelScript.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AngelScript</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">AngelScript.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">AngelScript</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AngelScript.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AngelScript</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;AS_IS_BUILDING;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;AS_IS_BUILDING;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;AS_IS_BUILDING;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;AS_IS_BUILDING;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;AS_IS_BUILDING;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;AS_IS_BUILDING;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/AngelScript/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/AngelScript/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/AngelScript/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/AngelScript/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/AngelScript/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/AngelScript/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/AngelScript/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/AngelScript/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/AngelScript/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_atomic.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_builder.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_bytecode.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_callfunc.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_callfunc_arm.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_callfunc_mips.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_callfunc_ppc.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_callfunc_ppc_64.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_callfunc_sh4.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_callfunc_x64_gcc.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_callfunc_x64_mingw.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_callfunc_x64_msvc.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_callfunc_x86.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_callfunc_xenon.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_compiler.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_configgroup.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_context.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_datatype.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_gc.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_generic.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_globalproperty.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_memory.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_module.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_objecttype.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_outputbuffer.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_parser.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_restore.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_scriptcode.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_scriptengine.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_scriptfunction.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_scriptnode.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_scriptobject.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_string.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_string_util.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_thread.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_tokenizer.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_typeinfo.cpp"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_variablescope.cpp"  />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include\angelscript.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include\wrap.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include\wrap16.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\include\wrapmacros.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_array.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_atomic.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_builder.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_bytecode.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_callfunc.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_compiler.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_config.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_configgroup.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_context.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_criticalsection.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_datatype.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_debug.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_gc.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_generic.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_map.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_memory.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_module.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_namespace.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_objecttype.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_outputbuffer.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_parser.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_property.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_restore.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_scriptcode.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_scriptengine.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_scriptfunction.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_scriptnode.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_scriptobject.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_string.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_string_util.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_symboltable.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_texts.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_thread.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_tokendef.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_tokenizer.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_typeinfo.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\source\as_variablescope.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\ZERO_CHECK.vcxproj">
+      <Project>{18305C6E-FDB4-3D73-9B32-DD0358D7C67E}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9C59EED7-2B90-368B-A43F-7E4894253992}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>Lua</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Lua.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Lua</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Lua.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Lua</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Lua.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Lua</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Lua/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Lua/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Lua/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Lua/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Lua/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Lua/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Lua/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Lua/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Lua/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lapi.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lauxlib.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lbaselib.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lcode.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\ldblib.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\ldebug.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\ldo.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\ldump.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lfunc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lgc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\linit.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\liolib.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\llex.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lmathlib.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lmem.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\loadlib.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lobject.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lopcodes.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\loslib.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lparser.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lstate.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lstring.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lstrlib.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\ltable.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\ltablib.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\ltm.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lundump.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lvm.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lzio.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\print.c"  />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lapi.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lauxlib.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lcode.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\ldebug.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\ldo.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lfunc.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lgc.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\llex.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\llimits.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lmem.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lobject.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lopcodes.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lparser.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lstate.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lstring.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\ltable.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\ltm.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lua.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\luaconf.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lualib.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lundump.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lvm.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\src\lzio.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\ZERO_CHECK.vcxproj">
+      <Project>{18305C6E-FDB4-3D73-9B32-DD0358D7C67E}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
