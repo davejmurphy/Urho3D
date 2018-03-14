@@ -28,6 +28,7 @@ namespace Urho3D
 {
 
 class Model;
+class Technique;
 
 /// Static model per-geometry extra data.
 struct StaticModelGeometryData
