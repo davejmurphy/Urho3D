@@ -323,6 +323,31 @@ void StaticModel::ApplyMaterialList(const String& fileName)
     }
 }
 
+void StaticModel::ApplyGltfMaterials(const String& fileName)
+{
+    // Create a material per object.
+    auto material = DynamicCast<Resource>(context_->CreateObject(Material::GetTypeStatic()));
+
+    // Each model in the geometry has a material assigned, so I need to build a list from when the geometry is loaded
+    // * This means building a gltf "material list"
+    // * Geometry to material is a many to one relationship, meaning that we would be loading the same material multiple times.
+
+    // I could load the material outside of the cache and try to manually add it to the cache.
+    // The the next time I can check the cache for the materials, but then load it from the gltf loader, instead of through the cache?
+    // * But then I'm pretty much using the cache
+
+    // bool ResourceCache::AddManualResource(Resource* resource)
+    // The resource name (string hash) is the identifier, and we can't use the name of the file
+    // * Could append the material index to the name before hashing it.
+
+    // How are resources new'd through the cache?
+    // * resource = DynamicCast<Resource>(context_->CreateObject(type));
+
+    // Load the gltf file
+    // Get all the materials out of the file
+    // From there all the materials can be assigned to the model 
+}
+
 Material* StaticModel::GetMaterial(unsigned index) const
 {
     return index < batches_.Size() ? batches_[index].material_ : (Material*)0;
