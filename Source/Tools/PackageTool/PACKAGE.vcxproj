@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C5F78B08-A4C4-38ED-AB11-94467B76224E}</ProjectGuid>
+    <ProjectGuid>{EF36370B-6919-3FB9-B4C9-6E710D2C8C93}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
@@ -53,7 +53,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\include;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\include;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -63,7 +63,7 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd C:\Users\Custom\Development\davejmurphy\Urho3D
+cd C:\Users\Owner\Development\Urho3D
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
@@ -79,7 +79,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\include;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\include;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -89,7 +89,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd C:\Users\Custom\Development\davejmurphy\Urho3D
+cd C:\Users\Owner\Development\Urho3D
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
@@ -105,7 +105,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\include;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\include;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -115,7 +115,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd C:\Users\Custom\Development\davejmurphy\Urho3D
+cd C:\Users\Owner\Development\Urho3D
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
@@ -130,7 +130,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\5f35f6f756854d15adb0dd8ab4b35c50\PACKAGE_force.rule">
+    <CustomBuild Include="C:\Users\Owner\Development\Urho3D\CMakeFiles\29fe95e01b149e8b1169010132c4bc32\PACKAGE_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 cd .
@@ -141,8 +141,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/CMakeFiles/5f35f6f756854d15adb0dd8ab4b35c50/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\PackageTool\CMakeFiles\PACKAGE_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Owner/Development/Urho3D/CMakeFiles/29fe95e01b149e8b1169010132c4bc32/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\Tools\PackageTool\CMakeFiles\PACKAGE_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
@@ -154,8 +154,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/CMakeFiles/5f35f6f756854d15adb0dd8ab4b35c50/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\PackageTool\CMakeFiles\PACKAGE_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Owner/Development/Urho3D/CMakeFiles/29fe95e01b149e8b1169010132c4bc32/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\Tools\PackageTool\CMakeFiles\PACKAGE_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
@@ -167,18 +167,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/CMakeFiles/5f35f6f756854d15adb0dd8ab4b35c50/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\PackageTool\CMakeFiles\PACKAGE_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Owner/Development/Urho3D/CMakeFiles/29fe95e01b149e8b1169010132c4bc32/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\Tools\PackageTool\CMakeFiles\PACKAGE_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\ZERO_CHECK.vcxproj">
-      <Project>{B8A0DBB4-0624-3604-9B9F-9F3EE94AB421}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\ZERO_CHECK.vcxproj">
+      <Project>{18305C6E-FDB4-3D73-9B32-DD0358D7C67E}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\ALL_BUILD.vcxproj">
-      <Project>{35901850-ADF1-34C1-BC21-67806AF90CDC}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\ALL_BUILD.vcxproj">
+      <Project>{F36B3DC8-DF75-35D4-869C-30682C830292}</Project>
       <Name>ALL_BUILD</Name>
     </ProjectReference>
   </ItemGroup>

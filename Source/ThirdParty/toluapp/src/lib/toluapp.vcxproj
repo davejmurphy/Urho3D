@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A66AE02D-E82B-3DF4-81F9-71A6C99B8D58}</ProjectGuid>
+    <ProjectGuid>{49DE84C5-130E-3E77-8C49-49279678B016}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
@@ -47,22 +47,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">toluapp.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">toluapp</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">toluapp.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">toluapp</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">toluapp.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">toluapp</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <CompileAs>CompileAsC</CompileAs>
@@ -81,10 +81,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -97,7 +97,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <CompileAs>CompileAsC</CompileAs>
@@ -116,10 +116,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -132,7 +132,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -150,10 +150,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\include;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\..\..\..\Lua\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -165,10 +165,10 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -176,12 +176,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -189,12 +189,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -202,22 +202,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/toluapp/src/lib/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\tolua_event.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\tolua_is.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\tolua_map.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\tolua_push.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\tolua_to.c"  />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\tolua_event.h" />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\tolua_event.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\tolua_is.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\tolua_map.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\tolua_push.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\tolua_to.c"  />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\tolua_event.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\ZERO_CHECK.vcxproj">
-      <Project>{B8A0DBB4-0624-3604-9B9F-9F3EE94AB421}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\ZERO_CHECK.vcxproj">
+      <Project>{18305C6E-FDB4-3D73-9B32-DD0358D7C67E}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
   </ItemGroup>

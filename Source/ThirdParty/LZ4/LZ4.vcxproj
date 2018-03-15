@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{739481AD-00BE-3DA3-B97A-6D73106C29D3}</ProjectGuid>
+    <ProjectGuid>{86359789-E0F8-3D1E-AC10-1A2AA5C7BF09}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
@@ -47,15 +47,15 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">LZ4.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">LZ4</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">LZ4.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">LZ4</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">LZ4.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">LZ4</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
@@ -165,10 +165,10 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/LZ4/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LZ4/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/LZ4/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LZ4/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -176,12 +176,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/LZ4/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LZ4/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/LZ4/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LZ4/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/LZ4/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LZ4/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -189,12 +189,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/LZ4/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LZ4/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/LZ4/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LZ4/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/LZ4/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LZ4/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -202,21 +202,21 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/LZ4/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LZ4/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\lz4.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\lz4hc.c"  />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\lz4.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\lz4hc.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\lz4opt.h" />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\lz4.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\lz4hc.c"  />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\lz4.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\lz4hc.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\lz4opt.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\ZERO_CHECK.vcxproj">
-      <Project>{B8A0DBB4-0624-3604-9B9F-9F3EE94AB421}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\ZERO_CHECK.vcxproj">
+      <Project>{18305C6E-FDB4-3D73-9B32-DD0358D7C67E}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
   </ItemGroup>

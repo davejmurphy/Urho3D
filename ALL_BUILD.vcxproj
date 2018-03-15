@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{35901850-ADF1-34C1-BC21-67806AF90CDC}</ProjectGuid>
+    <ProjectGuid>{F36B3DC8-DF75-35D4-869C-30682C830292}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
@@ -82,10 +82,10 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\Owner\Development\Urho3D\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -93,12 +93,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\3.10.2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\3.10.2\CMakeCCompiler.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\3.10.2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\3.10.2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\UrhoCommon.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\CheckHost.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\CheckCompilerToolchain.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeDependentOption.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\FindDirectX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeParseArguments.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Owner/Development/Urho3D/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\CMakeFiles\3.9.0-rc2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Owner\Development\Urho3D\CMakeFiles\3.9.0-rc2\CMakeCCompiler.cmake;C:\Users\Owner\Development\Urho3D\CMakeFiles\3.9.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Users\Owner\Development\Urho3D\CMakeFiles\3.9.0-rc2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\UrhoCommon.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\CheckHost.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\CheckCompilerToolchain.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeDependentOption.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\FindDirectX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.9\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.9\Templates\CPackConfig.cmake.in;C:\Users\Owner\Development\Urho3D\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -106,12 +106,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\3.10.2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\3.10.2\CMakeCCompiler.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\3.10.2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\3.10.2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\UrhoCommon.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\CheckHost.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\CheckCompilerToolchain.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeDependentOption.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\FindDirectX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeParseArguments.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Owner/Development/Urho3D/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\CMakeFiles\3.9.0-rc2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Owner\Development\Urho3D\CMakeFiles\3.9.0-rc2\CMakeCCompiler.cmake;C:\Users\Owner\Development\Urho3D\CMakeFiles\3.9.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Users\Owner\Development\Urho3D\CMakeFiles\3.9.0-rc2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\UrhoCommon.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\CheckHost.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\CheckCompilerToolchain.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeDependentOption.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\FindDirectX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.9\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.9\Templates\CPackConfig.cmake.in;C:\Users\Owner\Development\Urho3D\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -119,336 +119,336 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\3.10.2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\3.10.2\CMakeCCompiler.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\3.10.2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\3.10.2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\UrhoCommon.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\CheckHost.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\CheckCompilerToolchain.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeDependentOption.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\FindDirectX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeParseArguments.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Owner/Development/Urho3D/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\CMakeFiles\3.9.0-rc2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Owner\Development\Urho3D\CMakeFiles\3.9.0-rc2\CMakeCCompiler.cmake;C:\Users\Owner\Development\Urho3D\CMakeFiles\3.9.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Users\Owner\Development\Urho3D\CMakeFiles\3.9.0-rc2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\UrhoCommon.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\CheckHost.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\CheckCompilerToolchain.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeDependentOption.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\FindDirectX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;C:\Users\Owner\Development\Urho3D\CMake\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.9\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.9\Templates\CPackConfig.cmake.in;C:\Users\Owner\Development\Urho3D\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\ZERO_CHECK.vcxproj">
-      <Project>{B8A0DBB4-0624-3604-9B9F-9F3EE94AB421}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\ZERO_CHECK.vcxproj">
+      <Project>{18305C6E-FDB4-3D73-9B32-DD0358D7C67E}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\01_HelloWorld\01_HelloWorld.vcxproj">
-      <Project>{F1DA7596-4960-34AB-BAAF-5F5543BB3E57}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\01_HelloWorld\01_HelloWorld.vcxproj">
+      <Project>{F2A70C85-1549-37AE-8048-9650ED2DF4C3}</Project>
       <Name>01_HelloWorld</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\02_HelloGUI\02_HelloGUI.vcxproj">
-      <Project>{C6E10DF3-CC1B-332D-A0EB-653FF6A3ABDE}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\02_HelloGUI\02_HelloGUI.vcxproj">
+      <Project>{0D68F16A-F20A-3FB5-AB5C-8F79B80D122E}</Project>
       <Name>02_HelloGUI</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\03_Sprites\03_Sprites.vcxproj">
-      <Project>{9FB21A63-C588-358F-ACB0-29C613B7A0C6}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\03_Sprites\03_Sprites.vcxproj">
+      <Project>{755AEF5C-96A8-345D-B403-3B50C2001073}</Project>
       <Name>03_Sprites</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\04_StaticScene\04_StaticScene.vcxproj">
-      <Project>{53FF7798-CB28-3BE2-B2B4-9765BD90C983}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\04_StaticScene\04_StaticScene.vcxproj">
+      <Project>{DC59391A-3E2C-35ED-AE77-7B4CDB8D13AD}</Project>
       <Name>04_StaticScene</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\05_AnimatingScene\05_AnimatingScene.vcxproj">
-      <Project>{F404D8EC-E7BB-3AFB-B6FD-3A9EA1A9C1CE}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\05_AnimatingScene\05_AnimatingScene.vcxproj">
+      <Project>{CF6247EC-7E6D-38C3-8D37-0935382E831E}</Project>
       <Name>05_AnimatingScene</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\06_SkeletalAnimation\06_SkeletalAnimation.vcxproj">
-      <Project>{7A552254-8095-3F0A-A408-BC388BFD4E1A}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\06_SkeletalAnimation\06_SkeletalAnimation.vcxproj">
+      <Project>{DB81A002-29FC-3BD2-BEAC-7DB20864E632}</Project>
       <Name>06_SkeletalAnimation</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\07_Billboards\07_Billboards.vcxproj">
-      <Project>{7AA7AF5E-CBAC-3F79-A313-810253D1FF0C}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\07_Billboards\07_Billboards.vcxproj">
+      <Project>{36211DE6-6D74-30CB-9C49-E13D687D7923}</Project>
       <Name>07_Billboards</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\08_Decals\08_Decals.vcxproj">
-      <Project>{943B7520-F0D6-3E82-90A2-AA69B00C18E9}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\08_Decals\08_Decals.vcxproj">
+      <Project>{122F1CA3-DADC-3F2B-8142-9F082679B51B}</Project>
       <Name>08_Decals</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\09_MultipleViewports\09_MultipleViewports.vcxproj">
-      <Project>{3423C9CF-C350-30F9-AA65-D545330721EA}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\09_MultipleViewports\09_MultipleViewports.vcxproj">
+      <Project>{7524E941-2D3B-3F13-8C69-582232D33509}</Project>
       <Name>09_MultipleViewports</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\10_RenderToTexture\10_RenderToTexture.vcxproj">
-      <Project>{7DFC8328-0440-341F-A7E0-8D8BA4BE9BF9}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\10_RenderToTexture\10_RenderToTexture.vcxproj">
+      <Project>{E3848AA3-7766-3634-9F1D-D49EF44BE459}</Project>
       <Name>10_RenderToTexture</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\11_Physics\11_Physics.vcxproj">
-      <Project>{3D6639B0-81D1-3D75-BE64-E5183A74FD33}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\11_Physics\11_Physics.vcxproj">
+      <Project>{6F1F3975-2636-31BD-8369-BB8985627207}</Project>
       <Name>11_Physics</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\12_PhysicsStressTest\12_PhysicsStressTest.vcxproj">
-      <Project>{0E93DFAE-DBBB-341E-9B07-5A0F1CFBE19D}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\12_PhysicsStressTest\12_PhysicsStressTest.vcxproj">
+      <Project>{EDB5EB77-693C-311D-86BD-AB7C9BB61213}</Project>
       <Name>12_PhysicsStressTest</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\13_Ragdolls\13_Ragdolls.vcxproj">
-      <Project>{6F727F07-AFF8-35E6-9D54-13C985395DD2}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\13_Ragdolls\13_Ragdolls.vcxproj">
+      <Project>{E9ADEB7F-0AC6-32DA-84AE-80E8D0C9E8C3}</Project>
       <Name>13_Ragdolls</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\14_SoundEffects\14_SoundEffects.vcxproj">
-      <Project>{038C884E-6C8C-3A7E-87EA-BD252B17ED29}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\14_SoundEffects\14_SoundEffects.vcxproj">
+      <Project>{9553B1A0-5722-32B8-A51F-A716E820AD65}</Project>
       <Name>14_SoundEffects</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\15_Navigation\15_Navigation.vcxproj">
-      <Project>{B2AF777F-87BB-3681-B96B-A449FA34E5E2}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\15_Navigation\15_Navigation.vcxproj">
+      <Project>{3045E287-7AD8-3183-AA4D-D04E468091C9}</Project>
       <Name>15_Navigation</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\16_Chat\16_Chat.vcxproj">
-      <Project>{9EA641D9-113E-3F19-9C8F-AC49114B96B2}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\16_Chat\16_Chat.vcxproj">
+      <Project>{1FC22758-02A6-3B98-9BD7-3D5255BB0C3C}</Project>
       <Name>16_Chat</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\17_SceneReplication\17_SceneReplication.vcxproj">
-      <Project>{B335A301-7BBD-39D7-8280-0F14AE905618}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\17_SceneReplication\17_SceneReplication.vcxproj">
+      <Project>{71DB385B-1A21-332F-86FB-6A51A25B3E8D}</Project>
       <Name>17_SceneReplication</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\18_CharacterDemo\18_CharacterDemo.vcxproj">
-      <Project>{60ABDAC8-6FAA-3A72-BDF8-043C0324DBB5}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\18_CharacterDemo\18_CharacterDemo.vcxproj">
+      <Project>{05A80F6E-66C7-3D2C-B626-671FC7FA400A}</Project>
       <Name>18_CharacterDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\19_VehicleDemo\19_VehicleDemo.vcxproj">
-      <Project>{6CF451A8-2F46-3B9C-A550-79E206447079}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\19_VehicleDemo\19_VehicleDemo.vcxproj">
+      <Project>{CF286630-C154-343F-9377-E8A2B08D3868}</Project>
       <Name>19_VehicleDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\20_HugeObjectCount\20_HugeObjectCount.vcxproj">
-      <Project>{48CDB1EB-5413-3BB4-B776-6C8C8013D203}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\20_HugeObjectCount\20_HugeObjectCount.vcxproj">
+      <Project>{530C324A-A0E0-3368-9BB5-1BAC4E453158}</Project>
       <Name>20_HugeObjectCount</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\21_AngelScriptIntegration\21_AngelScriptIntegration.vcxproj">
-      <Project>{E22D2459-318F-360C-A7DD-B5CCD5FCBD07}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\21_AngelScriptIntegration\21_AngelScriptIntegration.vcxproj">
+      <Project>{72BBEBAD-16C9-3C0A-B348-94969FA2D91D}</Project>
       <Name>21_AngelScriptIntegration</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\22_LuaIntegration\22_LuaIntegration.vcxproj">
-      <Project>{135E2436-8CC4-34B1-BA1D-CD4AEE3DA2C5}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\22_LuaIntegration\22_LuaIntegration.vcxproj">
+      <Project>{568E315B-A33B-3850-A5CD-D491FCD04B17}</Project>
       <Name>22_LuaIntegration</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\23_Water\23_Water.vcxproj">
-      <Project>{70F83344-2320-398F-926F-90F35403CFB5}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\23_Water\23_Water.vcxproj">
+      <Project>{BBD19881-D7AA-380E-B5FF-02630498B909}</Project>
       <Name>23_Water</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\24_Urho2DSprite\24_Urho2DSprite.vcxproj">
-      <Project>{947D4FF6-12DE-379A-9639-E99443D1224D}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\24_Urho2DSprite\24_Urho2DSprite.vcxproj">
+      <Project>{3E321376-59AB-3E7D-951E-3B363726D932}</Project>
       <Name>24_Urho2DSprite</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\25_Urho2DParticle\25_Urho2DParticle.vcxproj">
-      <Project>{C709A4E3-9B40-3E74-88E0-87B5ADE73987}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\25_Urho2DParticle\25_Urho2DParticle.vcxproj">
+      <Project>{54F830EF-8D63-3086-8FBA-5B4418779E63}</Project>
       <Name>25_Urho2DParticle</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\26_ConsoleInput\26_ConsoleInput.vcxproj">
-      <Project>{0E1CC07B-3396-35D6-BD9E-4EADE2D449AA}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\26_ConsoleInput\26_ConsoleInput.vcxproj">
+      <Project>{0549EC39-C768-33DD-B8E8-7B116DC4E20A}</Project>
       <Name>26_ConsoleInput</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\27_Urho2DPhysics\27_Urho2DPhysics.vcxproj">
-      <Project>{98E5200D-AEC0-383C-BD90-C0C088E73CCB}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\27_Urho2DPhysics\27_Urho2DPhysics.vcxproj">
+      <Project>{5F619086-203E-332F-A6FD-8D93EF57B284}</Project>
       <Name>27_Urho2DPhysics</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\28_Urho2DPhysicsRope\28_Urho2DPhysicsRope.vcxproj">
-      <Project>{4D95F5D7-7F3D-35EA-92FB-B7B179314781}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\28_Urho2DPhysicsRope\28_Urho2DPhysicsRope.vcxproj">
+      <Project>{B5B6FE10-7F6B-3976-930E-F05A5478F8FB}</Project>
       <Name>28_Urho2DPhysicsRope</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\29_SoundSynthesis\29_SoundSynthesis.vcxproj">
-      <Project>{7031A933-DC34-3644-B21B-64CDA626C57F}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\29_SoundSynthesis\29_SoundSynthesis.vcxproj">
+      <Project>{D44701FE-BAFA-3CA6-B898-42D071D6926E}</Project>
       <Name>29_SoundSynthesis</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\30_LightAnimation\30_LightAnimation.vcxproj">
-      <Project>{42F934AE-7CDD-368E-A816-8A09865B6529}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\30_LightAnimation\30_LightAnimation.vcxproj">
+      <Project>{B72F0C03-12E3-319B-B786-99B1EE4BF70F}</Project>
       <Name>30_LightAnimation</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\31_MaterialAnimation\31_MaterialAnimation.vcxproj">
-      <Project>{C26FA39E-7460-3AD3-8081-1C5A86E376FC}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\31_MaterialAnimation\31_MaterialAnimation.vcxproj">
+      <Project>{254274E9-305A-3F46-96C4-C60263719D08}</Project>
       <Name>31_MaterialAnimation</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\32_Urho2DConstraints\32_Urho2DConstraints.vcxproj">
-      <Project>{F043B4D9-66D5-3B65-BE39-1098C29A78B3}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\32_Urho2DConstraints\32_Urho2DConstraints.vcxproj">
+      <Project>{87F036E9-EAE9-3E78-9A0A-5688B32CB387}</Project>
       <Name>32_Urho2DConstraints</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\33_Urho2DSpriterAnimation\33_Urho2DSpriterAnimation.vcxproj">
-      <Project>{8D498D46-8168-37CE-A513-416B0D72C722}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\33_Urho2DSpriterAnimation\33_Urho2DSpriterAnimation.vcxproj">
+      <Project>{B75D162A-951D-32B5-9F41-A7D1EB3551A8}</Project>
       <Name>33_Urho2DSpriterAnimation</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\34_DynamicGeometry\34_DynamicGeometry.vcxproj">
-      <Project>{52165260-17C8-3EEA-B607-CCE78E1CE45A}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\34_DynamicGeometry\34_DynamicGeometry.vcxproj">
+      <Project>{A17672C3-116F-3092-AA0D-232D296F7361}</Project>
       <Name>34_DynamicGeometry</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\35_SignedDistanceFieldText\35_SignedDistanceFieldText.vcxproj">
-      <Project>{C3884AAC-FCEA-3AE0-9DA2-E3BAE3DBE559}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\35_SignedDistanceFieldText\35_SignedDistanceFieldText.vcxproj">
+      <Project>{053A0C4E-0C95-3451-936F-97E682B458CC}</Project>
       <Name>35_SignedDistanceFieldText</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\36_Urho2DTileMap\36_Urho2DTileMap.vcxproj">
-      <Project>{5CA1277F-9E09-3833-A8B3-81A775EA1A64}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\36_Urho2DTileMap\36_Urho2DTileMap.vcxproj">
+      <Project>{8C4EB59C-6261-3A2F-BAB2-4D00BB55F63B}</Project>
       <Name>36_Urho2DTileMap</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\37_UIDrag\37_UIDrag.vcxproj">
-      <Project>{A2555370-68C1-394A-BB21-2DFAA77DE0BE}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\37_UIDrag\37_UIDrag.vcxproj">
+      <Project>{0B7C9CD5-33A2-314F-8BA1-071A75A836D4}</Project>
       <Name>37_UIDrag</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\38_SceneAndUILoad\38_SceneAndUILoad.vcxproj">
-      <Project>{389FF541-4CBC-38AD-9225-8EB89954D63A}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\38_SceneAndUILoad\38_SceneAndUILoad.vcxproj">
+      <Project>{F0725A97-C558-3010-BB19-F43F565FF784}</Project>
       <Name>38_SceneAndUILoad</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\39_CrowdNavigation\39_CrowdNavigation.vcxproj">
-      <Project>{BE50196D-8FEF-360E-908D-47CC0A238A8F}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\39_CrowdNavigation\39_CrowdNavigation.vcxproj">
+      <Project>{7D27F70B-0F1B-3E20-BA56-EC8D01CE8FBE}</Project>
       <Name>39_CrowdNavigation</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\40_Localization\40_Localization.vcxproj">
-      <Project>{718774F1-62C9-32A8-9F53-85531B9956F8}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\40_Localization\40_Localization.vcxproj">
+      <Project>{3E1F8F5D-FAD2-3C16-AD9D-AFB13DD88ECF}</Project>
       <Name>40_Localization</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\42_PBRMaterials\42_PBRMaterials.vcxproj">
-      <Project>{777E6186-9A31-3096-AF87-24E1342B7487}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\42_PBRMaterials\42_PBRMaterials.vcxproj">
+      <Project>{73853692-2970-34AA-B14D-198E0F13DB93}</Project>
       <Name>42_PBRMaterials</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\43_HttpRequestDemo\43_HttpRequestDemo.vcxproj">
-      <Project>{D01E6F36-E497-3459-8886-0D8C656B745F}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\43_HttpRequestDemo\43_HttpRequestDemo.vcxproj">
+      <Project>{4A1E4A73-915D-37F4-9132-B612406E9387}</Project>
       <Name>43_HttpRequestDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\44_RibbonTrailDemo\44_RibbonTrailDemo.vcxproj">
-      <Project>{D9F03CA3-1D63-345F-90CE-09E89259B0E8}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\44_RibbonTrailDemo\44_RibbonTrailDemo.vcxproj">
+      <Project>{84720A0E-40E9-3BE8-8398-59D5A44FC393}</Project>
       <Name>44_RibbonTrailDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\45_InverseKinematics\45_InverseKinematics.vcxproj">
-      <Project>{F3908948-18EF-3338-B904-DF1695EFD577}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\45_InverseKinematics\45_InverseKinematics.vcxproj">
+      <Project>{F85311C2-A081-32F6-8160-8A89975A3DBD}</Project>
       <Name>45_InverseKinematics</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\46_RaycastVehicle\46_RaycastVehicle.vcxproj">
-      <Project>{F33E3E60-2B1D-32E6-B0DA-AE6C85E70D5D}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\46_RaycastVehicle\46_RaycastVehicle.vcxproj">
+      <Project>{B6B8EC75-082B-3FD4-B68B-80507C15CBD5}</Project>
       <Name>46_RaycastVehicle</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Samples\47_Typography\47_Typography.vcxproj">
-      <Project>{814E284D-7FF3-338D-A146-B2B65AF0133E}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Samples\47_Typography\47_Typography.vcxproj">
+      <Project>{6CC0503E-54CC-3E61-8391-398EA89E4475}</Project>
       <Name>47_Typography</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\AngelScript\AngelScript.vcxproj">
-      <Project>{72503E0E-ABA6-3812-A9ED-E97D298646BD}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\AngelScript.vcxproj">
+      <Project>{F89F95F0-1EAC-3D34-AB64-6D219E04BCBA}</Project>
       <Name>AngelScript</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\AssetImporter\AssetImporter.vcxproj">
-      <Project>{68FE3372-29B2-31FB-838F-E79B9B354E71}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\AssetImporter\AssetImporter.vcxproj">
+      <Project>{C04FDC35-BAA0-33A5-A88C-AC3C5A2B26F4}</Project>
       <Name>AssetImporter</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\Assimp\Assimp.vcxproj">
-      <Project>{C9D76477-6D3C-3DA9-A186-68D4D78300E5}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Assimp\Assimp.vcxproj">
+      <Project>{F619291B-27C5-3302-B755-1B3A4AA59EAE}</Project>
       <Name>Assimp</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\Box2D\Box2D.vcxproj">
-      <Project>{FE14D1E5-54D0-309F-8CEF-D3C211ED3F07}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Box2D\Box2D.vcxproj">
+      <Project>{069F3E63-F955-3739-9A6E-A259AC64928B}</Project>
       <Name>Box2D</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\Bullet\Bullet.vcxproj">
-      <Project>{A729D02B-1CFE-3679-ADA8-E600A90A7D53}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Bullet\Bullet.vcxproj">
+      <Project>{826FC557-EB91-3BB9-AF0B-6783909A26E7}</Project>
       <Name>Bullet</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\Civetweb\Civetweb.vcxproj">
-      <Project>{CECE82C1-5737-3906-9A19-3BD5C342A484}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Civetweb\Civetweb.vcxproj">
+      <Project>{FD81FF33-BD56-38A8-9CA9-79385D1A1996}</Project>
       <Name>Civetweb</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\Detour\Detour.vcxproj">
-      <Project>{09B63909-91B8-3163-83F7-9BF4A6D78F03}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Detour\Detour.vcxproj">
+      <Project>{8F1D827B-6800-3528-8E2E-B35D00E63C05}</Project>
       <Name>Detour</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\DetourCrowd\DetourCrowd.vcxproj">
-      <Project>{04E0994A-5004-3572-8529-5EB0ED643BFC}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourCrowd\DetourCrowd.vcxproj">
+      <Project>{92668CFA-04AE-33DD-BBF4-1A9E930DCD7F}</Project>
       <Name>DetourCrowd</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\DetourTileCache\DetourTileCache.vcxproj">
-      <Project>{5141C561-3E10-389A-AE62-97DAB168EE1F}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourTileCache\DetourTileCache.vcxproj">
+      <Project>{B481C9EE-6179-388F-81CC-C3202BC83833}</Project>
       <Name>DetourTileCache</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\FreeType\FreeType.vcxproj">
-      <Project>{D2017B89-1C09-3FF7-B58E-5BF641182364}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\FreeType\FreeType.vcxproj">
+      <Project>{DE72330B-B08E-37F9-91F5-EC99C6AFEC18}</Project>
       <Name>FreeType</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\JO\JO.vcxproj">
-      <Project>{ADD7D331-C270-367F-AC3E-843E828BEB09}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\JO\JO.vcxproj">
+      <Project>{B0CE0172-4353-30DE-B6E1-311C8BDE6FD3}</Project>
       <Name>JO</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LZ4\LZ4.vcxproj">
-      <Project>{739481AD-00BE-3DA3-B97A-6D73106C29D3}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\LZ4.vcxproj">
+      <Project>{86359789-E0F8-3D1E-AC10-1A2AA5C7BF09}</Project>
       <Name>LZ4</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\LibCpuId\LibCpuId.vcxproj">
-      <Project>{E8B01527-EC42-3CE3-A2AD-DAAB9AFA9B50}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LibCpuId\LibCpuId.vcxproj">
+      <Project>{D9E409C5-756C-3463-B951-7689BB4FC454}</Project>
       <Name>LibCpuId</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\Lua\Lua.vcxproj">
-      <Project>{02C47A80-1F31-39F3-BF5A-0129E7D1EC52}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\Lua.vcxproj">
+      <Project>{9C59EED7-2B90-368B-A43F-7E4894253992}</Project>
       <Name>Lua</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\OgreImporter\OgreImporter.vcxproj">
-      <Project>{C73AFBFD-8F03-31C8-91CE-0B66ED8427C0}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\OgreImporter\OgreImporter.vcxproj">
+      <Project>{F37BEF26-8EA6-3676-AFDA-21FE50ED19AD}</Project>
       <Name>OgreImporter</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\PackageTool\PackageTool.vcxproj">
-      <Project>{12F438B7-EB78-3DA4-8ABF-5538DDEC4F40}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\PackageTool\PackageTool.vcxproj">
+      <Project>{423AC2FE-B6BF-30C9-8E4C-7B83C4123E6F}</Project>
       <Name>PackageTool</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\PugiXml\PugiXml.vcxproj">
-      <Project>{80C2C1BD-5860-31DC-B4CA-65C7FABEA4FA}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\PugiXml\PugiXml.vcxproj">
+      <Project>{CF973EB2-1A3B-35AC-877B-C04350694348}</Project>
       <Name>PugiXml</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\RampGenerator\RampGenerator.vcxproj">
-      <Project>{1696D29D-76C7-328B-B084-01612CC6B39E}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\RampGenerator\RampGenerator.vcxproj">
+      <Project>{6A36C715-50C3-32C3-B6C9-B3906CCAA24D}</Project>
       <Name>RampGenerator</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\Recast\Recast.vcxproj">
-      <Project>{A2D8C64D-C838-3B8F-A6B6-36FD21D11964}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Recast\Recast.vcxproj">
+      <Project>{F3E68AD2-5F44-3D86-88F7-34D0B8C217AB}</Project>
       <Name>Recast</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\SDL.vcxproj">
-      <Project>{A3A3F02C-BDB1-323E-A5CF-F4C8B54B41F9}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\SDL\SDL.vcxproj">
+      <Project>{DBA481A6-E79B-3E0E-8B54-AE2210CDD5B6}</Project>
       <Name>SDL</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\STB\STB.vcxproj">
-      <Project>{D61CCD8A-1FB5-348C-A6AD-6C7F17040E09}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\STB\STB.vcxproj">
+      <Project>{D2315B9E-FB02-3108-9606-4F6DDB661549}</Project>
       <Name>STB</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\ScriptCompiler\ScriptCompiler.vcxproj">
-      <Project>{6923D205-D2D3-3EE5-847C-F117E015C45C}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\ScriptCompiler\ScriptCompiler.vcxproj">
+      <Project>{3AB80A57-8DA1-3782-B416-81A09FBCED9F}</Project>
       <Name>ScriptCompiler</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\SpritePacker\SpritePacker.vcxproj">
-      <Project>{DB70DDE3-B13E-35C9-9BDF-13B1DBDA6B6F}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\SpritePacker\SpritePacker.vcxproj">
+      <Project>{C6C804DA-BFFA-3CA1-BC7A-8682B3E55E06}</Project>
       <Name>SpritePacker</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\StanHull\StanHull.vcxproj">
-      <Project>{86853C1C-9D6B-31FE-8730-C7EC955885A4}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\StanHull\StanHull.vcxproj">
+      <Project>{E7013BB8-875C-3A4F-B504-D67E55EACBA8}</Project>
       <Name>StanHull</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Urho3D\Urho3D.vcxproj">
-      <Project>{FB1B74B5-A2DC-307A-B5FD-1629AB16DE7B}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\Urho3D.vcxproj">
+      <Project>{19AFB6C0-A59F-3D25-AFF0-43C3B1529D45}</Project>
       <Name>Urho3D</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\Urho3DPlayer\Urho3DPlayer.vcxproj">
-      <Project>{001437D0-EEE9-305C-8433-C50995F57225}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\Urho3DPlayer\Urho3DPlayer.vcxproj">
+      <Project>{628BC794-3CD8-3303-8BEA-AF17CC2583CF}</Project>
       <Name>Urho3DPlayer</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\WebP.vcxproj">
-      <Project>{49E65AB0-BF50-39E2-BFB6-14ECC2CDF7E1}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\WebP.vcxproj">
+      <Project>{EC5C9C2C-B475-3D35-9D4E-EECAB9EE1B20}</Project>
       <Name>WebP</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\ik\ik.vcxproj">
-      <Project>{146B7D35-ECD3-3625-8055-444D2713291E}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\ik\ik.vcxproj">
+      <Project>{6EBBC7E3-0D07-3B4E-A492-FE1B8ED292B4}</Project>
       <Name>ik</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\kNet.vcxproj">
-      <Project>{C9321395-058B-3F79-A949-D873D2229764}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\kNet\kNet.vcxproj">
+      <Project>{9872C217-A7CA-337E-A8A2-17A306E33944}</Project>
       <Name>kNet</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\Lua\lua_interpreter.vcxproj">
-      <Project>{BBA5E441-F2E3-3DFE-9925-439DC764CEF2}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\lua_interpreter.vcxproj">
+      <Project>{D7928AAF-95AE-3F40-B2E2-E1181E1B8523}</Project>
       <Name>lua_interpreter</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\Lua\luac.vcxproj">
-      <Project>{FE56C294-A6C1-3218-B6F3-43B6BD188B43}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\luac.vcxproj">
+      <Project>{BF384DB8-9A45-35A8-8DA7-036F01014F4E}</Project>
       <Name>luac</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\rapidjson\rapidjson.vcxproj">
-      <Project>{73EF0353-24DE-33D9-A2C3-5AF131B288B3}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\rapidjson\rapidjson.vcxproj">
+      <Project>{8B45722A-978F-3F4C-B9D8-3D176B569E51}</Project>
       <Name>rapidjson</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\bin\tolua++.vcxproj">
-      <Project>{5A66E45D-B767-3752-8778-23C590FEDE78}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\bin\tolua++.vcxproj">
+      <Project>{B51E3D9D-70FE-32C9-844F-36E2F94898AC}</Project>
       <Name>tolua++</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\toluapp\src\lib\toluapp.vcxproj">
-      <Project>{A66AE02D-E82B-3DF4-81F9-71A6C99B8D58}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\toluapp.vcxproj">
+      <Project>{49DE84C5-130E-3E77-8C49-49279678B016}</Project>
       <Name>toluapp</Name>
     </ProjectReference>
   </ItemGroup>

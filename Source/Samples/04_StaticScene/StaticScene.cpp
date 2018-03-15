@@ -29,6 +29,7 @@
 #include <Urho3D/Graphics/Octree.h>
 #include <Urho3D/Graphics/Renderer.h>
 #include <Urho3D/Graphics/StaticModel.h>
+#include <Urho3D/Graphics/Technique.h>
 #include <Urho3D/Input/Input.h>
 #include <Urho3D/Resource/ResourceCache.h>
 #include <Urho3D/Scene/Scene.h>
@@ -103,16 +104,17 @@ void StaticScene::CreateScene()
     // see the model get simpler as it moves further away). Finally, rendering a large number of the same object with the
     // same material allows instancing to be used, if the GPU supports it. This reduces the amount of CPU work in rendering the
     // scene.
-    const unsigned NUM_OBJECTS = 200;
+    const unsigned NUM_OBJECTS = 1;
     for (unsigned i = 0; i < NUM_OBJECTS; ++i)
     {
         Node* mushroomNode = scene_->CreateChild("Mushroom");
-        mushroomNode->SetPosition(Vector3(Random(90.0f) - 45.0f, 0.0f, Random(90.0f) - 45.0f));
+        mushroomNode->SetPosition(Vector3(0.0f, 0.0f, 3.0f));
         mushroomNode->SetRotation(Quaternion(0.0f, Random(360.0f), 0.0f));
-        mushroomNode->SetScale(10.0f + Random(2.0f));
+        mushroomNode->SetScale(0.02f); // + Random(2.0f));
         StaticModel* mushroomObject = mushroomNode->CreateComponent<StaticModel>();
-        mushroomObject->SetModel(cache->GetResource<Model>("Models/Avocado/Avocado.gltf"));
-        mushroomObject->SetMaterial(cache->GetResource<Material>("Models/Avocado/Avocado.gltf"));
+        mushroomObject->SetModel(cache->GetResource<Model>("Models/TAPV/TAPV.gltf"));
+        mushroomObject->ApplyGltfMaterials("Models/TAPV/TAPV.gltf");
+        //mushroomObject->SetMaterial(cache->GetResource<Material>("Models/Avocado/Avocado.gltf"));
     }
 
     // Create a scene node for the camera, which we will move around
@@ -121,7 +123,7 @@ void StaticScene::CreateScene()
     cameraNode_->CreateComponent<Camera>();
 
     // Set an initial position for the camera scene node above the plane
-    cameraNode_->SetPosition(Vector3(0.0f, 5.0f, 0.0f));
+    cameraNode_->SetPosition(Vector3(0.0f, 0.0f, 0.0f));
 }
 
 void StaticScene::CreateInstructions()

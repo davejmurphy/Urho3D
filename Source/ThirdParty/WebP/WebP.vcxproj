@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{49E65AB0-BF50-39E2-BFB6-14ECC2CDF7E1}</ProjectGuid>
+    <ProjectGuid>{EC5C9C2C-B475-3D35-9D4E-EECAB9EE1B20}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
@@ -47,15 +47,15 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">WebP.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">WebP</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">WebP.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">WebP</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WebP.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WebP</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
@@ -165,10 +165,10 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/WebP/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/WebP/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/WebP/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/WebP/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -176,12 +176,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/WebP/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/WebP/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/WebP/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/WebP/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/WebP/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/WebP/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -189,12 +189,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/WebP/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/WebP/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/WebP/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/ThirdParty/WebP/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/WebP/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/ThirdParty/WebP/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -202,172 +202,172 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/WebP/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Owner/Development/Urho3D/Source/ThirdParty/WebP/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\alpha_dec.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\buffer_dec.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\frame_dec.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\idec_dec.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\io_dec.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\quant_dec.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\tree_dec.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\vp8_dec.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\vp8l_dec.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\webp_dec.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\demux\anim_decode.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\demux\demux.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\alpha_processing.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\alpha_processing_mips_dsp_r2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\alpha_processing_neon.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\alpha_processing_sse2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\alpha_processing_sse41.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\cost.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\cost_mips32.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\cost_mips_dsp_r2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\cost_sse2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\cpu.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\dec.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_clip_tables.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_mips32.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_mips_dsp_r2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_msa.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_neon.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_sse2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_sse41.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_avx2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_mips32.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_mips_dsp_r2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_msa.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_neon.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_sse2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_sse41.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\filters.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\filters_mips_dsp_r2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\filters_msa.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\filters_neon.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\filters_sse2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc_mips32.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc_mips_dsp_r2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc_msa.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc_neon.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc_sse2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc_sse41.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_mips_dsp_r2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_msa.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_neon.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_sse2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\rescaler.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\rescaler_mips32.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\rescaler_mips_dsp_r2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\rescaler_msa.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\rescaler_neon.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\rescaler_sse2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\ssim.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\ssim_sse2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\upsampling.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\upsampling_mips_dsp_r2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\upsampling_msa.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\upsampling_neon.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\upsampling_sse2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\yuv.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\yuv_mips32.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\yuv_mips_dsp_r2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\yuv_neon.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\yuv_sse2.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\alpha_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\analysis_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\backward_references_cost_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\backward_references_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\config_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\cost_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\delta_palettization_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\filter_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\frame_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\histogram_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\iterator_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\near_lossless_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\picture_csp_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\picture_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\picture_psnr_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\picture_rescale_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\picture_tools_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\predictor_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\quant_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\syntax_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\token_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\tree_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\vp8l_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\webp_enc.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\mux\anim_encode.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\mux\muxedit.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\mux\muxinternal.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\mux\muxread.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\bit_reader_utils.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\bit_writer_utils.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\color_cache_utils.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\filters_utils.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\huffman_encode_utils.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\huffman_utils.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\quant_levels_dec_utils.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\quant_levels_utils.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\random_utils.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\rescaler_utils.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\thread_utils.c"  />
-    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\utils.c"  />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\alphai_dec.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\common_dec.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\vp8_dec.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\vp8i_dec.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\vp8li_dec.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dec\webpi_dec.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\common_sse2.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\dsp.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_common.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\mips_macro.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\msa_macro.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\neon.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\dsp\yuv.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\backward_references_enc.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\cost_enc.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\delta_palettization_enc.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\histogram_enc.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\vp8i_enc.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\enc\vp8li_enc.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\mux\animi.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\mux\muxi.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\bit_reader_inl_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\bit_reader_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\bit_writer_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\color_cache_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\endian_inl_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\filters_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\huffman_encode_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\huffman_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\quant_levels_dec_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\quant_levels_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\random_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\rescaler_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\thread_utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\utils\utils.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\webp\decode.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\webp\demux.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\webp\encode.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\webp\format_constants.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\webp\mux.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\webp\mux_types.h" />
-    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\WebP\src\webp\types.h" />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\alpha_dec.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\buffer_dec.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\frame_dec.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\idec_dec.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\io_dec.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\quant_dec.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\tree_dec.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\vp8_dec.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\vp8l_dec.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\webp_dec.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\demux\anim_decode.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\demux\demux.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\alpha_processing.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\alpha_processing_mips_dsp_r2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\alpha_processing_neon.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\alpha_processing_sse2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\alpha_processing_sse41.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\cost.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\cost_mips32.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\cost_mips_dsp_r2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\cost_sse2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\cpu.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\dec.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_clip_tables.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_mips32.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_mips_dsp_r2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_msa.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_neon.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_sse2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\dec_sse41.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_avx2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_mips32.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_mips_dsp_r2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_msa.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_neon.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_sse2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\enc_sse41.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\filters.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\filters_mips_dsp_r2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\filters_msa.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\filters_neon.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\filters_sse2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc_mips32.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc_mips_dsp_r2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc_msa.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc_neon.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc_sse2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_enc_sse41.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_mips_dsp_r2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_msa.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_neon.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_sse2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\rescaler.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\rescaler_mips32.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\rescaler_mips_dsp_r2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\rescaler_msa.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\rescaler_neon.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\rescaler_sse2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\ssim.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\ssim_sse2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\upsampling.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\upsampling_mips_dsp_r2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\upsampling_msa.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\upsampling_neon.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\upsampling_sse2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\yuv.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\yuv_mips32.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\yuv_mips_dsp_r2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\yuv_neon.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\yuv_sse2.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\alpha_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\analysis_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\backward_references_cost_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\backward_references_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\config_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\cost_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\delta_palettization_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\filter_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\frame_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\histogram_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\iterator_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\near_lossless_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\picture_csp_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\picture_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\picture_psnr_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\picture_rescale_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\picture_tools_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\predictor_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\quant_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\syntax_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\token_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\tree_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\vp8l_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\webp_enc.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\mux\anim_encode.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\mux\muxedit.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\mux\muxinternal.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\mux\muxread.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\bit_reader_utils.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\bit_writer_utils.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\color_cache_utils.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\filters_utils.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\huffman_encode_utils.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\huffman_utils.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\quant_levels_dec_utils.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\quant_levels_utils.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\random_utils.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\rescaler_utils.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\thread_utils.c"  />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\utils.c"  />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\alphai_dec.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\common_dec.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\vp8_dec.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\vp8i_dec.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\vp8li_dec.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dec\webpi_dec.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\common_sse2.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\dsp.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\lossless_common.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\mips_macro.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\msa_macro.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\neon.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\dsp\yuv.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\backward_references_enc.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\cost_enc.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\delta_palettization_enc.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\histogram_enc.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\vp8i_enc.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\enc\vp8li_enc.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\mux\animi.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\mux\muxi.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\bit_reader_inl_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\bit_reader_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\bit_writer_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\color_cache_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\endian_inl_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\filters_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\huffman_encode_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\huffman_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\quant_levels_dec_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\quant_levels_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\random_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\rescaler_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\thread_utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\utils\utils.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\webp\decode.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\webp\demux.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\webp\encode.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\webp\format_constants.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\webp\mux.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\webp\mux_types.h" />
+    <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\src\webp\types.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\ZERO_CHECK.vcxproj">
-      <Project>{B8A0DBB4-0624-3604-9B9F-9F3EE94AB421}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\ZERO_CHECK.vcxproj">
+      <Project>{18305C6E-FDB4-3D73-9B32-DD0358D7C67E}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
   </ItemGroup>

@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{35901850-ADF1-34C1-BC21-67806AF90CDC}</ProjectGuid>
+    <ProjectGuid>{F36B3DC8-DF75-35D4-869C-30682C830292}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
@@ -53,7 +53,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\include;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\include;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -63,7 +63,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\include;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\include;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -73,7 +73,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\include;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\include;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -82,10 +82,10 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\Owner\Development\Urho3D\Source\Tools\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/Tools/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/Tools/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -93,12 +93,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\FindUrho3D.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Owner/Development/Urho3D/Source/Tools/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\Tools\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\CMake\Modules\FindUrho3D.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Users\Owner\Development\Urho3D\Source\Tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\Tools\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/Tools/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/Tools/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -106,12 +106,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\FindUrho3D.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Owner/Development/Urho3D/Source/Tools/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\Tools\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\CMake\Modules\FindUrho3D.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Users\Owner\Development\Urho3D\Source\Tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\Tools\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Owner/Development/Urho3D/Source/Tools/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Owner/Development/Urho3D -BC:/Users/Owner/Development/Urho3D --check-stamp-file C:/Users/Owner/Development/Urho3D/Source/Tools/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -119,48 +119,48 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\FindUrho3D.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Owner/Development/Urho3D/Source/Tools/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\Tools\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\CMake\Modules\FindUrho3D.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Users\Owner\Development\Urho3D\Source\Tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\Tools\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\ZERO_CHECK.vcxproj">
-      <Project>{B8A0DBB4-0624-3604-9B9F-9F3EE94AB421}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\ZERO_CHECK.vcxproj">
+      <Project>{18305C6E-FDB4-3D73-9B32-DD0358D7C67E}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\AssetImporter\AssetImporter.vcxproj">
-      <Project>{68FE3372-29B2-31FB-838F-E79B9B354E71}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\AssetImporter\AssetImporter.vcxproj">
+      <Project>{C04FDC35-BAA0-33A5-A88C-AC3C5A2B26F4}</Project>
       <Name>AssetImporter</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\Assimp\Assimp.vcxproj">
-      <Project>{C9D76477-6D3C-3DA9-A186-68D4D78300E5}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Assimp\Assimp.vcxproj">
+      <Project>{F619291B-27C5-3302-B755-1B3A4AA59EAE}</Project>
       <Name>Assimp</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\OgreImporter\OgreImporter.vcxproj">
-      <Project>{C73AFBFD-8F03-31C8-91CE-0B66ED8427C0}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\OgreImporter\OgreImporter.vcxproj">
+      <Project>{F37BEF26-8EA6-3676-AFDA-21FE50ED19AD}</Project>
       <Name>OgreImporter</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\PackageTool\PackageTool.vcxproj">
-      <Project>{12F438B7-EB78-3DA4-8ABF-5538DDEC4F40}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\PackageTool\PackageTool.vcxproj">
+      <Project>{423AC2FE-B6BF-30C9-8E4C-7B83C4123E6F}</Project>
       <Name>PackageTool</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\RampGenerator\RampGenerator.vcxproj">
-      <Project>{1696D29D-76C7-328B-B084-01612CC6B39E}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\RampGenerator\RampGenerator.vcxproj">
+      <Project>{6A36C715-50C3-32C3-B6C9-B3906CCAA24D}</Project>
       <Name>RampGenerator</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\ScriptCompiler\ScriptCompiler.vcxproj">
-      <Project>{6923D205-D2D3-3EE5-847C-F117E015C45C}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\ScriptCompiler\ScriptCompiler.vcxproj">
+      <Project>{3AB80A57-8DA1-3782-B416-81A09FBCED9F}</Project>
       <Name>ScriptCompiler</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\SpritePacker\SpritePacker.vcxproj">
-      <Project>{DB70DDE3-B13E-35C9-9BDF-13B1DBDA6B6F}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\SpritePacker\SpritePacker.vcxproj">
+      <Project>{C6C804DA-BFFA-3CA1-BC7A-8682B3E55E06}</Project>
       <Name>SpritePacker</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\Urho3DPlayer\Urho3DPlayer.vcxproj">
-      <Project>{001437D0-EEE9-305C-8433-C50995F57225}</Project>
+    <ProjectReference Include="C:\Users\Owner\Development\Urho3D\Source\Tools\Urho3DPlayer\Urho3DPlayer.vcxproj">
+      <Project>{628BC794-3CD8-3303-8BEA-AF17CC2583CF}</Project>
       <Name>Urho3DPlayer</Name>
     </ProjectReference>
   </ItemGroup>

@@ -456,7 +456,7 @@ bool Material::Load(const tinygltf::Model& source)
 
     techniques_.Clear();
     // Load technique
-    Technique* tech = cache->GetResource<Technique>("Techniques/DiffNormal.xml");
+    Technique* tech = cache->GetResource<Technique>("Techniques/Diff.xml");
     if (tech)
     {
         TechniqueEntry newTechnique;
@@ -467,14 +467,14 @@ bool Material::Load(const tinygltf::Model& source)
     SortTechniques();
     ApplyShaderDefines();
     // Set textures
-    auto temp = source.images.at(0).uri;
+    //auto temp = source.images.at(0).uri;
 
     SetTexture(TU_DIFFUSE, cache->GetResource<Texture2D>("Models/Avocado/Avocado_baseColor.png"));
-    SetTexture(TU_NORMAL, cache->GetResource<Texture2D>("Models/Avocado/Avocado_normal.png"));
+    //SetTexture(TU_NORMAL, cache->GetResource<Texture2D>("Models/Avocado/Avocado_normal.png"));
     //SetTexture(TU_EMISSIVE, cache->GetResource<Texture2D>("Models/Helmet/Default_emissive.jpg"));
     
     // Set shader parameters
-    //SetShaderParameter("MatDiffColor", Vector4(1.0f, 1.0f, 1.0f, 1.0f));
+    SetShaderParameter("MatDiffColor", Vector4(1.0f, 1.0f, 1.0f, 1.0f));
     //SetShaderParameter("MatEmissiveColor", Vector3(1.0f, 1.0f, 1.0f));
     //SetShaderParameter("Metallic", 0.5f);
 
