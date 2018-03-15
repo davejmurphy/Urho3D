@@ -108,7 +108,7 @@ void StaticScene::CreateScene()
     for (unsigned i = 0; i < NUM_OBJECTS; ++i)
     {
         Node* mushroomNode = scene_->CreateChild("Mushroom");
-        mushroomNode->SetPosition(Vector3(Random(90.0f) - 45.0f, 0.0f, Random(90.0f) - 45.0f));
+        mushroomNode->SetPosition(Vector3(0.0f, 0.0f, 3.0f));
         mushroomNode->SetRotation(Quaternion(0.0f, Random(360.0f), 0.0f));
         mushroomNode->SetScale(0.02f); // + Random(2.0f));
         StaticModel* mushroomObject = mushroomNode->CreateComponent<StaticModel>();
@@ -123,7 +123,7 @@ void StaticScene::CreateScene()
     cameraNode_->CreateComponent<Camera>();
 
     // Set an initial position for the camera scene node above the plane
-    cameraNode_->SetPosition(Vector3(0.0f, 5.0f, 0.0f));
+    cameraNode_->SetPosition(Vector3(0.0f, 0.0f, 0.0f));
 }
 
 void StaticScene::CreateInstructions()
