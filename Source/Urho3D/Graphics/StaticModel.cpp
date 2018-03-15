@@ -356,8 +356,9 @@ void StaticModel::ApplyGltfMaterials(const String& fileName)
         auto newMaterial = DynamicCast<Material>(context_->CreateObject(Material::GetTypeStatic()));
         
         newMaterial->SetNumTechniques(1);
-        newMaterial->SetTechnique(0, cache->GetResource<Technique>("Techniques/Diff.xml"));
+        newMaterial->SetTechnique(0, cache->GetResource<Technique>("Techniques/DiffNormal.xml"));
         newMaterial->SetTexture(TU_DIFFUSE, cache->GetResource<Texture2D>("Models/Avocado/Avocado_baseColor.png"));
+        newMaterial->SetTexture(TU_NORMAL, cache->GetResource<Texture2D>("Models/Avocado/Avocado_normal.png"));
         
         auto string = material.name;
         for (auto value : material.values)

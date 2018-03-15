@@ -103,6 +103,7 @@ Thumbs.db
 .directory
 
 *.tlog
+*.vcxproj.user
 # *.vcxproj
 # *.sln
 *.filters

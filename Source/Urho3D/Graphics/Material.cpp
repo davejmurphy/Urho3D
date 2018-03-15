@@ -1006,7 +1006,6 @@ bool Material::Save(JSONValue& dest) const
 
 void Material::SetNumTechniques(unsigned num)
 {
-    techniques_.Clear();
     if (!num)
         return;
 

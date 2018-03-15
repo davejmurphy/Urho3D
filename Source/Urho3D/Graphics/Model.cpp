@@ -100,12 +100,15 @@ bool Model::BeginLoad(Deserializer& source)
 
             const auto gltfNode = gltfModel.nodes.at(0);
 
+            auto size = gltfModel.bufferViews.size();
+            auto numMeshes = gltfModel.meshes.size();
+
             if (true) //gltfNode.mesh != -1)
             {
                 GltfHelper::Primitive primitive;
 
                 const auto gltfMesh = gltfModel.meshes.at(0); // gltfNode.mesh);
-                // TODO: The .bin file should already be layed out for copying into the vertex/index buffers. So we may not need to read them.
+                                                              // TODO: The .bin file should already be layed out for copying into the vertex/index buffers. So we may not need to read them.
                 for (const auto gltfPrimitive : gltfMesh.primitives)
                 {
                     primitive = GltfHelper::ReadPrimitive(gltfModel, gltfPrimitive);
@@ -132,7 +135,6 @@ bool Model::BeginLoad(Deserializer& source)
                     VertexBufferDesc& desc = loadVBData_[i];
 
                     desc.vertexCount_ = primitive.Vertices.size(); // source.ReadUInt();
-                 
                     {
                         // Need to pair up types and sematices for the vertices
                         desc.vertexElements_.Clear();
@@ -253,7 +255,7 @@ bool Model::BeginLoad(Deserializer& source)
                 }
 
                 // Read geometries
-                unsigned numGeometries = 1;
+                unsigned numGeometries = gltfModel.nodes.size();
                 geometries_.Reserve(numGeometries);
                 geometryBoneMappings_.Reserve(numGeometries);
                 geometryCenters_.Reserve(numGeometries);
