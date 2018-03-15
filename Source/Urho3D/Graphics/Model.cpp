@@ -103,36 +103,36 @@ bool Model::BeginLoad(Deserializer& source)
             auto size = gltfModel.bufferViews.size();
             auto numMeshes = gltfModel.meshes.size();
 
-            if (true) //gltfNode.mesh != -1)
+            geometries_.Clear();
+            geometryBoneMappings_.Clear();
+            geometryCenters_.Clear();
+            morphs_.Clear();
+            vertexBuffers_.Clear();
+            indexBuffers_.Clear();
+
+            for (const auto gltfMesh : gltfModel.meshes)
             {
                 GltfHelper::Primitive primitive;
 
-                const auto gltfMesh = gltfModel.meshes.at(0); // gltfNode.mesh);
-                                                              // TODO: The .bin file should already be layed out for copying into the vertex/index buffers. So we may not need to read them.
+                // TODO: The .bin file should already be layed out for copying into the vertex/index buffers. So we may not need to read them.
                 for (const auto gltfPrimitive : gltfMesh.primitives)
                 {
                     primitive = GltfHelper::ReadPrimitive(gltfModel, gltfPrimitive);
                 }
-
-                geometries_.Clear();
-                geometryBoneMappings_.Clear();
-                geometryCenters_.Clear();
-                morphs_.Clear();
-                vertexBuffers_.Clear();
-                indexBuffers_.Clear();
-
+                               
                 unsigned memoryUse = sizeof(Model);
                 bool async = GetAsyncLoadState() == ASYNC_LOADING;
 
                 // Read vertex buffers
-                unsigned numVertexBuffers = 1; // source.ReadUInt();
+                unsigned numVertexBuffers = vertexBuffers_.Size() + 1; // source.ReadUInt();
                 vertexBuffers_.Reserve(numVertexBuffers);
                 morphRangeStarts_.Resize(numVertexBuffers);
                 morphRangeCounts_.Resize(numVertexBuffers);
                 loadVBData_.Resize(numVertexBuffers);
-                for (unsigned i = 0; i < numVertexBuffers; ++i)
+                
+                // Load vertex related info
                 {
-                    VertexBufferDesc& desc = loadVBData_[i];
+                    VertexBufferDesc& desc = loadVBData_[numVertexBuffers - 1];
 
                     desc.vertexCount_ = primitive.Vertices.size(); // source.ReadUInt();
                     {
@@ -208,10 +208,11 @@ bool Model::BeginLoad(Deserializer& source)
                 }
 
                 // Read index buffers
-                unsigned numIndexBuffers = 1;
+                unsigned numIndexBuffers = indexBuffers_.Size() + 1;
                 indexBuffers_.Reserve(numIndexBuffers);
                 loadIBData_.Resize(numIndexBuffers);
-                for (unsigned i = 0; i < numIndexBuffers; ++i)
+                
+                // Get the indices for the current primitive
                 {
                     unsigned indexCount = primitive.Indices.size();
                     unsigned indexSize = sizeof(primitive.Indices.at(0));
@@ -221,16 +222,16 @@ bool Model::BeginLoad(Deserializer& source)
                     // Prepare index buffer data to be uploaded during EndLoad()
                     if (async)
                     {
-                        loadIBData_[i].indexCount_ = indexCount;
-                        loadIBData_[i].indexSize_ = indexSize;
-                        loadIBData_[i].dataSize_ = indexCount * indexSize;
-                        loadIBData_[i].data_ = new unsigned char[loadIBData_[i].dataSize_];
-                        source.Read(loadIBData_[i].data_.Get(), loadIBData_[i].dataSize_);
+                        loadIBData_[numIndexBuffers - 1].indexCount_ = indexCount;
+                        loadIBData_[numIndexBuffers - 1].indexSize_ = indexSize;
+                        loadIBData_[numIndexBuffers - 1].dataSize_ = indexCount * indexSize;
+                        loadIBData_[numIndexBuffers - 1].data_ = new unsigned char[loadIBData_[numIndexBuffers - 1].dataSize_];
+                        source.Read(loadIBData_[numIndexBuffers - 1].data_.Get(), loadIBData_[numIndexBuffers - 1].dataSize_);
                     }
                     else
                     {
                         // If not async loading, use locking to avoid extra allocation & copy
-                        loadIBData_[i].data_.Reset(); // Make sure no previous data
+                        loadIBData_[numIndexBuffers - 1].data_.Reset(); // Make sure no previous data
                         buffer->SetShadowed(true);
                         buffer->SetSize(indexCount, indexSize > sizeof(unsigned short));
                         void* dest = buffer->Lock(0, indexCount);
@@ -255,12 +256,13 @@ bool Model::BeginLoad(Deserializer& source)
                 }
 
                 // Read geometries
-                unsigned numGeometries = gltfModel.nodes.size();
+                unsigned numGeometries = geometries_.Size() + 1;
                 geometries_.Reserve(numGeometries);
                 geometryBoneMappings_.Reserve(numGeometries);
                 geometryCenters_.Reserve(numGeometries);
                 loadGeometries_.Resize(numGeometries);
-                for (unsigned i = 0; i < numGeometries; ++i)
+                
+                // Do one geometry at a time. for (unsigned i = 0; i < numGeometries; ++i)
                 {
                     // Read bone mappings
                     unsigned boneMappingCount = 0; // TODO: Add bones back
@@ -272,15 +274,15 @@ bool Model::BeginLoad(Deserializer& source)
                     unsigned numLodLevels = 1; // TODO: Use actual lod levels
                     Vector<SharedPtr<Geometry> > geometryLodLevels;
                     geometryLodLevels.Reserve(numLodLevels);
-                    loadGeometries_[i].Resize(numLodLevels);
+                    loadGeometries_[numGeometries - 1].Resize(numLodLevels);
 
                     for (unsigned j = 0; j < numLodLevels; ++j)
                     {
                         float distance = 0; // TODO: Read the lod distance
                         PrimitiveType type = TRIANGLE_LIST; // TODO: Read the geo type from gltf (PrimitiveType)source.ReadUInt();
 
-                        unsigned vbRef = 0; // source.ReadUInt();
-                        unsigned ibRef = 0; // source.ReadUInt();
+                        unsigned vbRef = numGeometries - 1; // source.ReadUInt();
+                        unsigned ibRef = numGeometries - 1; // source.ReadUInt();
                         unsigned indexStart = 0; // source.ReadUInt();
                         unsigned indexCount = primitive.Indices.size(); // source.ReadUInt();
 
@@ -305,11 +307,11 @@ bool Model::BeginLoad(Deserializer& source)
                         geometry->SetLodDistance(distance);
 
                         // Prepare geometry to be defined during EndLoad()
-                        loadGeometries_[i][j].type_ = type;
-                        loadGeometries_[i][j].vbRef_ = vbRef;
-                        loadGeometries_[i][j].ibRef_ = ibRef;
-                        loadGeometries_[i][j].indexStart_ = indexStart;
-                        loadGeometries_[i][j].indexCount_ = indexCount;
+                        loadGeometries_[numGeometries - 1][j].type_ = type;
+                        loadGeometries_[numGeometries - 1][j].vbRef_ = vbRef;
+                        loadGeometries_[numGeometries - 1][j].ibRef_ = ibRef;
+                        loadGeometries_[numGeometries - 1][j].indexStart_ = indexStart;
+                        loadGeometries_[numGeometries - 1][j].indexCount_ = indexCount;
 
                         geometryLodLevels.Push(geometry);
                         memoryUse += sizeof(Geometry);
@@ -382,10 +384,9 @@ bool Model::BeginLoad(Deserializer& source)
                     LoadMetadataFromXML(file->GetRoot());
 
                 SetMemoryUse(memoryUse);
-                return true;
             }
 
-            return false;
+            return true;
         }
         else
         {

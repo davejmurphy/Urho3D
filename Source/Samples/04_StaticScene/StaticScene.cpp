@@ -104,13 +104,13 @@ void StaticScene::CreateScene()
     // see the model get simpler as it moves further away). Finally, rendering a large number of the same object with the
     // same material allows instancing to be used, if the GPU supports it. This reduces the amount of CPU work in rendering the
     // scene.
-    const unsigned NUM_OBJECTS = 200;
+    const unsigned NUM_OBJECTS = 1;
     for (unsigned i = 0; i < NUM_OBJECTS; ++i)
     {
         Node* mushroomNode = scene_->CreateChild("Mushroom");
         mushroomNode->SetPosition(Vector3(Random(90.0f) - 45.0f, 0.0f, Random(90.0f) - 45.0f));
         mushroomNode->SetRotation(Quaternion(0.0f, Random(360.0f), 0.0f));
-        mushroomNode->SetScale(1.0f + Random(2.0f));
+        mushroomNode->SetScale(0.02f); // + Random(2.0f));
         StaticModel* mushroomObject = mushroomNode->CreateComponent<StaticModel>();
         mushroomObject->SetModel(cache->GetResource<Model>("Models/TAPV/TAPV.gltf"));
         mushroomObject->ApplyGltfMaterials("Models/TAPV/TAPV.gltf");
