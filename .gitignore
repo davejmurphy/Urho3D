@@ -104,7 +104,7 @@ Thumbs.db
 
 *.tlog
 #*.vcxproj
-*.sln
+#*.sln
 *.filters
 .vs
 
