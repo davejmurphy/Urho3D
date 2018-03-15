@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C9321395-058B-3F79-A949-D873D2229764}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>kNet</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">kNet.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">kNet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">kNet.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">kNet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">kNet.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">kNet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;_WINSOCKAPI_;KNET_MEMORY_LEAK_CHECK;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;_WINSOCKAPI_;KNET_MEMORY_LEAK_CHECK;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;_WINSOCKAPI_;KNET_MEMORY_LEAK_CHECK;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SECURE_SCL=0;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;_WINSOCKAPI_;KNET_MEMORY_LEAK_CHECK;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;_WINSOCKAPI_;KNET_MEMORY_LEAK_CHECK;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;_WINSOCKAPI_;KNET_MEMORY_LEAK_CHECK;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/kNet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/kNet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/kNet/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/kNet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/kNet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/kNet/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/kNet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/kNet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/kNet/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\64BitAllocDebugger.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="64BitAllocDebugger.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="64BitAllocDebugger.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="64BitAllocDebugger.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\Clock.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="Clock.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="Clock.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="Clock.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\DataDeserializer.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="DataDeserializer.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="DataDeserializer.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="DataDeserializer.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\DataSerializer.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="DataSerializer.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="DataSerializer.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="DataSerializer.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\FragmentedTransferManager.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="FragmentedTransferManager.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="FragmentedTransferManager.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="FragmentedTransferManager.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\MessageConnection.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="MessageConnection.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="MessageConnection.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="MessageConnection.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\MessageListParser.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="MessageListParser.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="MessageListParser.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="MessageListParser.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\Network.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="Network.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="Network.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="Network.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\NetworkLogging.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="NetworkLogging.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="NetworkLogging.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="NetworkLogging.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\NetworkMessage.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="NetworkMessage.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="NetworkMessage.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="NetworkMessage.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\NetworkServer.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="NetworkServer.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="NetworkServer.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="NetworkServer.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\NetworkSimulator.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="NetworkSimulator.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="NetworkSimulator.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="NetworkSimulator.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\NetworkWorkerThread.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="NetworkWorkerThread.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="NetworkWorkerThread.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="NetworkWorkerThread.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\SerializationStructCompiler.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="SerializationStructCompiler.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="SerializationStructCompiler.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="SerializationStructCompiler.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\SerializedDataIterator.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="SerializedDataIterator.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="SerializedDataIterator.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="SerializedDataIterator.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\Socket.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="Socket.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="Socket.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="Socket.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\TCPMessageConnection.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="TCPMessageConnection.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="TCPMessageConnection.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="TCPMessageConnection.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\Thread.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="Thread.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="Thread.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="Thread.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\UDPMessageConnection.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="UDPMessageConnection.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="UDPMessageConnection.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="UDPMessageConnection.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\win32\W32Event.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="W32Event.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="W32Event.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="W32Event.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\win32\W32EventArray.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="W32EventArray.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="W32EventArray.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="W32EventArray.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\src\win32\W32Thread.cpp" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DEBUG_CPP_NAME="W32Thread.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DEBUG_CPP_NAME="W32Thread.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG_CPP_NAME="W32Thread.cpp";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNetBuildConfig.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNetFwd.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\64BitAllocDebugger.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Alignment.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Allocator.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Array.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Atomics.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\BasicSerializedDataTypes.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\BitOps.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Clock.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\DataDeserializer.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\DataSerializer.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Datagram.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\DebugMemoryLeakCheck.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\EndPoint.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Event.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\EventArray.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\FragmentedTransferManager.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\IMessageHandler.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\INetworkServerListener.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\LockFreePoolAllocator.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Lockable.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\MaxHeap.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\MessageConnection.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\MessageListParser.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\NetException.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Network.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\NetworkLogging.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\NetworkMessage.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\NetworkServer.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\NetworkSimulator.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\NetworkWorkerThread.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\OrderedHashTable.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\PolledTimer.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\RingBuffer.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\SequentialIntegerSet.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\SerializationStructCompiler.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\SerializedDataIterator.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\SharedPtr.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Socket.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Sort.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\SortCmp.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\StatsEventHierarchy.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\StdCMallocHeap.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\TCPMessageConnection.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Thread.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Types.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\UDPMessageConnection.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\VLEPacker.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\WaitFreeQueue.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\SharedPtr.inl" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\Sort.inl" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\kNet\include\kNet\win32\WS2Include.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\ZERO_CHECK.vcxproj">
+      <Project>{B8A0DBB4-0624-3604-9B9F-9F3EE94AB421}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

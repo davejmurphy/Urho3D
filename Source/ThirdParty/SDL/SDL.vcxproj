@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A3A3F02C-BDB1-323E-A5CF-F4C8B54B41F9}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>SDL</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SDL.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SDL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">SDL.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">SDL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SDL.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SDL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\generated;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;USING_GENERATED_CONFIG_H;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;USING_GENERATED_CONFIG_H;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\generated;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\generated;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\generated;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;USING_GENERATED_CONFIG_H;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;USING_GENERATED_CONFIG_H;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\generated;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\generated;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\generated;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;USING_GENERATED_CONFIG_H;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;URHO3D_ANGELSCRIPT;URHO3D_FILEWATCHER;URHO3D_IK;URHO3D_LOGGING;URHO3D_LUA;URHO3D_MINIDUMPS;URHO3D_NAVIGATION;URHO3D_NETWORK;URHO3D_PHYSICS;URHO3D_PROFILING;URHO3D_THREADING;URHO3D_URHO2D;URHO3D_WEBP;_CRT_SECURE_NO_WARNINGS;USING_GENERATED_CONFIG_H;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\generated;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\generated;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/SDL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/SDL/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/SDL/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceRuns.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeDependentOption.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\cmake\macros.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\cmake\sdlchecks.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config.h.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/SDL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/SDL/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/SDL/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceRuns.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeDependentOption.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\cmake\macros.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\cmake\sdlchecks.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config.h.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/SDL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/SDL/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/ThirdParty/SDL/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceRuns.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeDependentOption.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\cmake\macros.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\cmake\sdlchecks.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config.h.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\SDL.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\SDL_assert.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\SDL_error.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\SDL_hints.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\SDL_log.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\atomic\SDL_atomic.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\atomic\SDL_spinlock.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\e_atan2.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\e_log.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\e_pow.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\e_rem_pio2.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\e_sqrt.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\k_cos.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\k_rem_pio2.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\k_sin.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\k_tan.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\s_atan.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\s_copysign.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\s_cos.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\s_fabs.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\s_floor.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\s_scalbn.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\s_sin.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\libm\s_tan.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\stdlib\SDL_getenv.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\stdlib\SDL_iconv.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\stdlib\SDL_malloc.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\stdlib\SDL_qsort.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\stdlib\SDL_stdlib.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\stdlib\SDL_string.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\thread\SDL_thread.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\timer\SDL_timer.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\audio\SDL_audio.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\audio\SDL_audiocvt.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\audio\SDL_audiodev.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\audio\SDL_audiotypecvt.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\audio\SDL_mixer.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\audio\SDL_wave.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\cpuinfo\SDL_cpuinfo.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\events\SDL_clipboardevents.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\events\SDL_dropevents.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\events\SDL_events.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\events\SDL_gesture.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\events\SDL_keyboard.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\events\SDL_mouse.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\events\SDL_quit.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\events\SDL_touch.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\events\SDL_windowevents.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\file\SDL_rwops.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\haptic\SDL_haptic.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\joystick\SDL_gamecontroller.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\joystick\SDL_joystick.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\power\SDL_power.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_RLEaccel.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_blit.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_blit_0.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_blit_1.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_blit_A.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_blit_N.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_blit_auto.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_blit_copy.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_blit_slow.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_bmp.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_clipboard.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_egl.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_fillrect.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_pixels.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_rect.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_shape.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_stretch.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_surface.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\SDL_video.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\audio\dummy\SDL_dummyaudio.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\audio\disk\SDL_diskaudio.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\dummy\SDL_nullevents.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\dummy\SDL_nullframebuffer.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\dummy\SDL_nullvideo.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\core\windows\SDL_windows.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\core\windows\SDL_xinput.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\audio\winmm\SDL_winmm.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\audio\directsound\SDL_directsound.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\audio\xaudio2\SDL_xaudio2.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\windows\SDL_windowsclipboard.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\windows\SDL_windowsevents.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\windows\SDL_windowsframebuffer.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\windows\SDL_windowskeyboard.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\windows\SDL_windowsmessagebox.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\windows\SDL_windowsmodes.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\windows\SDL_windowsmouse.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\windows\SDL_windowsopengl.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\windows\SDL_windowsopengles.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\windows\SDL_windowsshape.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\windows\SDL_windowsvideo.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\video\windows\SDL_windowswindow.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\thread\windows\SDL_sysmutex.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\thread\windows\SDL_syssem.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\thread\windows\SDL_systhread.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\thread\windows\SDL_systls.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\thread\generic\SDL_syscond.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\power\windows\SDL_syspower.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\filesystem\windows\SDL_sysfilesystem.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\timer\windows\SDL_systimer.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\loadso\windows\SDL_sysloadso.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\joystick\windows\SDL_dinputjoystick.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\joystick\windows\SDL_mmjoystick.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\joystick\windows\SDL_windowsjoystick.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\joystick\windows\SDL_xinputjoystick.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\haptic\windows\SDL_dinputhaptic.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\haptic\windows\SDL_windowshaptic.c"  />
+    <ClCompile Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\src\haptic\windows\SDL_xinputhaptic.c"  />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_assert.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_atomic.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_audio.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_bits.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_blendmode.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_clipboard.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config_android.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config_iphoneos.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config_macosx.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config_minimal.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config_pandora.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config_psp.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config_windows.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config_winrt.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_config_wiz.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_copying.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_cpuinfo.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_egl.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_endian.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_error.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_events.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_filesystem.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_gamecontroller.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_gesture.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_haptic.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_hints.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_joystick.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_keyboard.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_keycode.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_loadso.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_log.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_main.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_messagebox.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_mouse.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_mutex.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_name.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_opengl.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_opengl_glext.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_opengles.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_opengles2.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_opengles2_gl2.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_pixels.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_platform.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_power.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_quit.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_rect.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_render.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_revision.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_rwops.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_scancode.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_shape.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_stdinc.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_surface.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_system.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_syswm.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_thread.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_timer.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_touch.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_types.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_version.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\SDL_video.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\begin_code.h" />
+    <ClInclude Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\SDL\include\close_code.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\ZERO_CHECK.vcxproj">
+      <Project>{B8A0DBB4-0624-3604-9B9F-9F3EE94AB421}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

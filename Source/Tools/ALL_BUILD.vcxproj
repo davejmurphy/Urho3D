@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{35901850-ADF1-34C1-BC21-67806AF90CDC}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\include;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\include;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Custom\Development\davejmurphy\Urho3D\include;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Custom\Development\davejmurphy\Urho3D\include\Urho3D\ThirdParty\Lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\FindUrho3D.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\FindUrho3D.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Custom/Development/davejmurphy/Urho3D -BC:/Users/Custom/Development/davejmurphy/Urho3D --check-stamp-file C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Custom/Development/davejmurphy/Urho3D/Source/Tools/CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt;C:\Users\Custom\Development\davejmurphy\Urho3D\CMake\Modules\FindUrho3D.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\ZERO_CHECK.vcxproj">
+      <Project>{B8A0DBB4-0624-3604-9B9F-9F3EE94AB421}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\AssetImporter\AssetImporter.vcxproj">
+      <Project>{68FE3372-29B2-31FB-838F-E79B9B354E71}</Project>
+      <Name>AssetImporter</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\ThirdParty\Assimp\Assimp.vcxproj">
+      <Project>{C9D76477-6D3C-3DA9-A186-68D4D78300E5}</Project>
+      <Name>Assimp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\OgreImporter\OgreImporter.vcxproj">
+      <Project>{C73AFBFD-8F03-31C8-91CE-0B66ED8427C0}</Project>
+      <Name>OgreImporter</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\PackageTool\PackageTool.vcxproj">
+      <Project>{12F438B7-EB78-3DA4-8ABF-5538DDEC4F40}</Project>
+      <Name>PackageTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\RampGenerator\RampGenerator.vcxproj">
+      <Project>{1696D29D-76C7-328B-B084-01612CC6B39E}</Project>
+      <Name>RampGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\ScriptCompiler\ScriptCompiler.vcxproj">
+      <Project>{6923D205-D2D3-3EE5-847C-F117E015C45C}</Project>
+      <Name>ScriptCompiler</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\SpritePacker\SpritePacker.vcxproj">
+      <Project>{DB70DDE3-B13E-35C9-9BDF-13B1DBDA6B6F}</Project>
+      <Name>SpritePacker</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Custom\Development\davejmurphy\Urho3D\Source\Tools\Urho3DPlayer\Urho3DPlayer.vcxproj">
+      <Project>{001437D0-EEE9-305C-8433-C50995F57225}</Project>
+      <Name>Urho3DPlayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
