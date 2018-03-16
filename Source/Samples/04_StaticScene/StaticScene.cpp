@@ -30,6 +30,9 @@
 #include <Urho3D/Graphics/Renderer.h>
 #include <Urho3D/Graphics/StaticModel.h>
 #include <Urho3D/Graphics/Technique.h>
+#include <Urho3D/Graphics/Geometry.h>
+#include <Urho3D/Graphics/VertexBuffer.h>
+#include <Urho3D/Graphics/IndexBuffer.h>
 #include <Urho3D/Input/Input.h>
 #include <Urho3D/Resource/ResourceCache.h>
 #include <Urho3D/Scene/Scene.h>
@@ -37,9 +40,13 @@
 #include <Urho3D/UI/Text.h>
 #include <Urho3D/UI/UI.h>
 
+#include "../Gltf/GltfHelper.h"
+
 #include "StaticScene.h"
 
 #include <Urho3D/DebugNew.h>
+
+#include <tiny_gltf.h>
 
 URHO3D_DEFINE_APPLICATION_MAIN(StaticScene)
 
@@ -81,6 +88,111 @@ void StaticScene::CreateScene()
     // optimizing manner
     scene_->CreateComponent<Octree>();
 
+    tinygltf::Model gltfModel;
+    std::string errorMessage;
+    tinygltf::TinyGLTF loader;
+
+    bool isLoaded = loader.LoadASCIIFromFile(&gltfModel, &errorMessage, std::string("C:/Users/Owner/Development/Urho3D/bin/Data/Models/TAPV/TAPV.gltf"));
+    if (!isLoaded)
+    {
+        const auto msg = "Failed to load gltf model" + errorMessage;
+        throw std::exception(msg.c_str());
+    }
+
+    // Do loading of the tank, most other models will have recursive structure, the tank doesn't.
+    Node* tankroot = scene_->CreateChild("tankroot");
+    tankroot->SetPosition(Vector3(0.0f, 0.0f, 3.0f));
+    
+    for (auto gltfNode : gltfModel.nodes)
+    {
+        if (gltfNode.mesh == -1)
+        {
+            continue;
+        }
+
+        Node* node = tankroot->CreateChild(String(gltfNode.name.c_str()));
+
+        node->SetPosition(Vector3(gltfNode.translation.at(0), gltfNode.translation.at(1), gltfNode.translation.at(2)));
+        node->SetScale(Vector3(gltfNode.scale.at(0), gltfNode.scale.at(1), gltfNode.scale.at(2)));
+        //node->SetRotation(Quaternion(gltfNode.rotation.at(0), gltfNode.rotation.at(1), gltfNode.rotation.at(2), gltfNode.rotation.at(3)));
+
+        auto staticModel = node->CreateComponent<StaticModel>();
+        
+        SharedPtr<Model> model(new Model(context_));
+        SharedPtr<VertexBuffer> vb(new VertexBuffer(context_));
+        SharedPtr<IndexBuffer> ib(new IndexBuffer(context_));
+        SharedPtr<Geometry> geom(new Geometry(context_));
+
+        // Now load the vertex buffer for this model
+        auto mesh = gltfModel.meshes.at(gltfNode.mesh);
+        auto primitive = mesh.primitives.at(0); //TODO: handle case with more than one primitive
+
+        if (mesh.primitives.size() > 1) {
+            auto thing = mesh.primitives.at(1);
+        }
+
+        auto helperPrimitive = GltfHelper::ReadPrimitive(gltfModel, primitive);
+
+        const auto numVertices = helperPrimitive.Vertices.size();
+        const auto numIndices = helperPrimitive.Indices.size();
+        std::vector<float> vertices;
+        vertices.resize(12 * numVertices);
+        auto count = 0;
+
+        for (auto vertex : helperPrimitive.Vertices)
+        {
+            vertices[count++] = vertex.Position.x;
+            vertices[count++] = vertex.Position.y;
+            vertices[count++] = vertex.Position.z;
+            vertices[count++] = vertex.Normal.x;
+            vertices[count++] = vertex.Normal.y;
+            vertices[count++] = vertex.Normal.z;
+            vertices[count++] = vertex.Tangent.x;
+            vertices[count++] = vertex.Tangent.y;
+            vertices[count++] = vertex.Tangent.z;
+            vertices[count++] = vertex.Tangent.w;
+            vertices[count++] = vertex.TexCoord0.x;
+            vertices[count++] = vertex.TexCoord0.y;
+        }
+
+        auto vertexData = &vertices[0];
+
+        auto indexData = &helperPrimitive.Indices[0];
+
+        vb->SetShadowed(true);
+        PODVector<VertexElement> elements;
+        elements.Push(VertexElement(TYPE_VECTOR3, SEM_POSITION));
+        elements.Push(VertexElement(TYPE_VECTOR3, SEM_NORMAL));
+        elements.Push(VertexElement(TYPE_VECTOR4, SEM_TANGENT));
+        elements.Push(VertexElement(TYPE_VECTOR2, SEM_TEXCOORD));
+        vb->SetSize(numVertices, elements);
+        vb->SetData(vertexData);
+
+        // Then load the index buffer for this
+        ib->SetShadowed(true);
+        ib->SetSize(numIndices, true);
+        ib->SetData(indexData);
+
+        geom->SetVertexBuffer(0, vb);
+        geom->SetIndexBuffer(ib);
+        geom->SetDrawRange(TRIANGLE_LIST, 0, numIndices);
+
+        model->SetNumGeometries(1);
+        model->SetGeometry(0, 0, geom);
+        model->SetBoundingBox(BoundingBox(Vector3(-2.0f, -2.0f, -2.0f), Vector3(2.5f, 2.5f, 2.5f)));
+
+        staticModel->SetModel(model);
+        
+        auto material = cache->GetResource<Material>("Materials/Jack.xml");
+
+        auto gltfMaterial = mesh.primitives;
+        
+        material->SetShaderParameter("MatDiffColor", Vector4(1, 0, 0, 1));
+
+        staticModel->SetMaterial(material);
+
+    }
+
     // Create a child scene node (at world origin) and a StaticModel component into it. Set the StaticModel to show a simple
     // plane mesh with a "stone" material. Note that naming the scene nodes is optional. Scale the scene node larger
     // (100 x 100 world units)
@@ -98,13 +210,18 @@ void StaticScene::CreateScene()
     Light* light = lightNode->CreateComponent<Light>();
     light->SetLightType(LIGHT_DIRECTIONAL);
 
+    lightNode = scene_->CreateChild("DirectionalLight");
+    lightNode->SetDirection(Vector3(-0.6f, 1.0f, -0.8f)); // The direction vector does not need to be normalized
+    light = lightNode->CreateComponent<Light>();
+    light->SetLightType(LIGHT_DIRECTIONAL);
+
     // Create more StaticModel objects to the scene, randomly positioned, rotated and scaled. For rotation, we construct a
     // quaternion from Euler angles where the Y angle (rotation about the Y axis) is randomized. The mushroom model contains
     // LOD levels, so the StaticModel component will automatically select the LOD level according to the view distance (you'll
     // see the model get simpler as it moves further away). Finally, rendering a large number of the same object with the
     // same material allows instancing to be used, if the GPU supports it. This reduces the amount of CPU work in rendering the
     // scene.
-    const unsigned NUM_OBJECTS = 1;
+    const unsigned NUM_OBJECTS = 0;
     for (unsigned i = 0; i < NUM_OBJECTS; ++i)
     {
         Node* mushroomNode = scene_->CreateChild("Mushroom");

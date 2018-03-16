@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Release|Win32">
@@ -66,9 +66,6 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)../../../External;$(IncludePath)</IncludePath>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Owner\Development\Urho3D\include;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Bullet;C:\Users\Owner\Development\Urho3D\include\Urho3D\ThirdParty\Lua;C:\Users\Owner\Development\Urho3D\Source\Samples;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -101,8 +98,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message></Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files (x86)/Windows Kits/10/Redist/D3D/x86/d3dcompiler_47.dll" C:/Users/Owner/Development/Urho3D/bin
 if %errorlevel% neq 0 goto :cmEnd
@@ -124,8 +120,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <OptimizeReferences>true</OptimizeReferences>
       <ProgramDataBaseFile>C:/Users/Owner/Development/Urho3D/bin/42_PBRMaterials.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
-      <Version>
-      </Version>
+      <Version></Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -163,8 +158,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message></Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files (x86)/Windows Kits/10/Redist/D3D/x86/d3dcompiler_47.dll" C:/Users/Owner/Development/Urho3D/bin
 if %errorlevel% neq 0 goto :cmEnd
@@ -186,8 +180,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <OptimizeReferences>true</OptimizeReferences>
       <ProgramDataBaseFile>C:/Users/Owner/Development/Urho3D/bin/42_PBRMaterials.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
-      <Version>
-      </Version>
+      <Version></Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -224,8 +217,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message></Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different "C:/Program Files (x86)/Windows Kits/10/Redist/D3D/x86/d3dcompiler_47.dll" C:/Users/Owner/Development/Urho3D/bin
 if %errorlevel% neq 0 goto :cmEnd
@@ -245,8 +237,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ImportLibrary>C:/Users/Owner/Development/Urho3D/Source/Samples/42_PBRMaterials/Debug/42_PBRMaterials_d.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Users/Owner/Development/Urho3D/bin/42_PBRMaterials_d.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
-      <Version>
-      </Version>
+      <Version></Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -296,7 +287,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Samples\42_PBRMaterials\PBRMaterials.cpp" />
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Samples\42_PBRMaterials\PBRMaterials.cpp"  />
     <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\Samples\42_PBRMaterials\PBRMaterials.h" />
     <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\Samples\Sample.h" />
     <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\Samples\Sample.inl" />

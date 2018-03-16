@@ -61,7 +61,7 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)../../External;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Owner\Development\Urho3D\External;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -203,7 +203,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Lib>
-      <AdditionalOptions>%(AdditionalOptions) /machine:X86 C:/Users/Owner/Development/Urho3D/$(Configuration)/Gltf.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/FreeType/$(Configuration)/FreeType.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/JO/$(Configuration)/JO.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LZ4/$(Configuration)/LZ4.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/PugiXml/$(Configuration)/PugiXml.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/SDL/$(Configuration)/SDL.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/StanHull/$(Configuration)/StanHull.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/AngelScript/$(Configuration)/AngelScript.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Lua/$(Configuration)/Lua.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/toluapp/src/lib/$(Configuration)/toluapp.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Civetweb/$(Configuration)/Civetweb.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/kNet/$(Configuration)/kNet.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/ik/$(Configuration)/ik.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Detour/$(Configuration)/Detour.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/DetourCrowd/$(Configuration)/DetourCrowd.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/DetourTileCache/$(Configuration)/DetourTileCache.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Recast/$(Configuration)/Recast.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Box2D/$(Configuration)/Box2D.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/WebP/$(Configuration)/WebP.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Bullet/$(Configuration)/Bullet.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LibCpuId/$(Configuration)/LibCpuId.lib</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86 C:/Users/Owner/Development/Urho3D/Source/ThirdParty/FreeType/$(Configuration)/FreeType.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/JO/$(Configuration)/JO.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LZ4/$(Configuration)/LZ4.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/PugiXml/$(Configuration)/PugiXml.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/SDL/$(Configuration)/SDL.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/StanHull/$(Configuration)/StanHull.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/AngelScript/$(Configuration)/AngelScript.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Lua/$(Configuration)/Lua.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/toluapp/src/lib/$(Configuration)/toluapp.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Civetweb/$(Configuration)/Civetweb.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/kNet/$(Configuration)/kNet.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/ik/$(Configuration)/ik.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Detour/$(Configuration)/Detour.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/DetourCrowd/$(Configuration)/DetourCrowd.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/DetourTileCache/$(Configuration)/DetourTileCache.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Recast/$(Configuration)/Recast.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Box2D/$(Configuration)/Box2D.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/WebP/$(Configuration)/WebP.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/Bullet/$(Configuration)/Bullet.lib C:/Users/Owner/Development/Urho3D/Source/ThirdParty/LibCpuId/$(Configuration)/LibCpuId.lib  C:/Users/Owner/Development/Urho3D/Debug/Gltf.lib</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -246,76 +246,6 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Owner/Development/Urho3D/Source/Urho3D/CMakeLists.txt;C:\Users\Owner\Development\Urho3D\Source\Urho3D\CMakeLists.txt;C:\Users\Owner\Development\Urho3D\CMake\Modules\exportheader.cmake.in;C:\Users\Owner\Development\Urho3D\Source\Urho3D\Urho3DAll.h.in;C:\Users\Owner\Development\Urho3D\Source\Urho3D\Urho3D.pc.in;C:\Users\Owner\Development\Urho3D\Source\Urho3D\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\Urho3D\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="C:\Users\Owner\Development\Urho3D\CMakeFiles\d02dae36c91f2d815d5bd4aaf9435480\librevision.h.rule">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-cd C:\Users\Owner\Development\Urho3D
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -DFILENAME=C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new -P CMake/Modules/GetUrhoRevision.cmake
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E remove C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Owner/Development/Urho3D/CMakeFiles/d02dae36c91f2d815d5bd4aaf9435480/librevision.h.rule;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\FreeType\Release\FreeType.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\JO\Release\JO.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\Release\LZ4.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\PugiXml\Release\PugiXml.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\SDL\Release\SDL.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\StanHull\Release\StanHull.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\Release\AngelScript.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\Release\Lua.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\Release\toluapp.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Civetweb\Release\Civetweb.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\kNet\Release\kNet.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\ik\Release\ik.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Detour\Release\Detour.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourCrowd\Release\DetourCrowd.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourTileCache\Release\DetourTileCache.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Recast\Release\Recast.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Box2D\Release\Box2D.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\Release\WebP.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Bullet\Release\Bullet.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LibCpuId\Release\LibCpuId.lib;C:\Users\Owner\Development\Urho3D\CMake\Modules\GetUrhoRevision.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\Urho3D\librevision.h</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
-      </Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-cd C:\Users\Owner\Development\Urho3D
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -DFILENAME=C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new -P CMake/Modules/GetUrhoRevision.cmake
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E remove C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Owner/Development/Urho3D/CMakeFiles/d02dae36c91f2d815d5bd4aaf9435480/librevision.h.rule;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\FreeType\RelWithDebInfo\FreeType.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\JO\RelWithDebInfo\JO.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\RelWithDebInfo\LZ4.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\PugiXml\RelWithDebInfo\PugiXml.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\SDL\RelWithDebInfo\SDL.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\StanHull\RelWithDebInfo\StanHull.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\RelWithDebInfo\AngelScript.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\RelWithDebInfo\Lua.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\RelWithDebInfo\toluapp.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Civetweb\RelWithDebInfo\Civetweb.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\kNet\RelWithDebInfo\kNet.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\ik\RelWithDebInfo\ik.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Detour\RelWithDebInfo\Detour.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourCrowd\RelWithDebInfo\DetourCrowd.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourTileCache\RelWithDebInfo\DetourTileCache.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Recast\RelWithDebInfo\Recast.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Box2D\RelWithDebInfo\Box2D.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\RelWithDebInfo\WebP.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Bullet\RelWithDebInfo\Bullet.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LibCpuId\RelWithDebInfo\LibCpuId.lib;C:\Users\Owner\Development\Urho3D\CMake\Modules\GetUrhoRevision.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\Urho3D\librevision.h</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-cd C:\Users\Owner\Development\Urho3D
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -DFILENAME=C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new -P CMake/Modules/GetUrhoRevision.cmake
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E remove C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Owner/Development/Urho3D/CMakeFiles/d02dae36c91f2d815d5bd4aaf9435480/librevision.h.rule;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\FreeType\Debug\FreeType.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\JO\Debug\JO.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\Debug\LZ4.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\PugiXml\Debug\PugiXml.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\SDL\Debug\SDL.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\StanHull\Debug\StanHull.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\Debug\AngelScript.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\Debug\Lua.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\Debug\toluapp.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Civetweb\Debug\Civetweb.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\kNet\Debug\kNet.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\ik\Debug\ik.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Detour\Debug\Detour.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourCrowd\Debug\DetourCrowd.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourTileCache\Debug\DetourTileCache.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Recast\Debug\Recast.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Box2D\Debug\Box2D.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\Debug\WebP.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Bullet\Debug\Bullet.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LibCpuId\Debug\LibCpuId.lib;C:\Users\Owner\Development\Urho3D\CMake\Modules\GetUrhoRevision.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\Urho3D\librevision.h</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -1196,6 +1126,76 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Owner/Development/Urho3D/CMakeFiles/3c664430f67179f4a45f9db572e46702/Urho2DLuaAPI.cpp.rule;C:\Users\Owner\Development\Urho3D\bin\tool\tolua++.exe;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2DLuaAPI.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\AnimatedSprite2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\AnimationSet2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\CollisionBox2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\CollisionChain2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\CollisionCircle2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\CollisionEdge2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\CollisionPolygon2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\CollisionShape2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\Constraint2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ConstraintDistance2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ConstraintFriction2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ConstraintGear2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ConstraintMotor2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ConstraintMouse2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ConstraintPrismatic2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ConstraintPulley2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ConstraintRevolute2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ConstraintRope2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ConstraintWeld2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ConstraintWheel2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\Drawable2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ParticleEffect2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\ParticleEmitter2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\PhysicsWorld2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\RigidBody2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\Sprite2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\SpriteSheet2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\StaticSprite2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\TileMap2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\TileMapDefs2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\TileMapLayer2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\Urho2D\TmxFile2D.pkg;C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\pkgs\ToCppHook.lua;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\Urho2DLuaAPI.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Owner\Development\Urho3D\CMakeFiles\d02dae36c91f2d815d5bd4aaf9435480\librevision.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd C:\Users\Owner\Development\Urho3D
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DFILENAME=C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new -P CMake/Modules/GetUrhoRevision.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E remove C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Owner/Development/Urho3D/CMakeFiles/d02dae36c91f2d815d5bd4aaf9435480/librevision.h.rule;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\FreeType\Release\FreeType.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\JO\Release\JO.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\Release\LZ4.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\PugiXml\Release\PugiXml.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\SDL\Release\SDL.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\StanHull\Release\StanHull.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\Release\AngelScript.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\Release\Lua.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\Release\toluapp.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Civetweb\Release\Civetweb.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\kNet\Release\kNet.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\ik\Release\ik.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Detour\Release\Detour.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourCrowd\Release\DetourCrowd.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourTileCache\Release\DetourTileCache.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Recast\Release\Recast.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Box2D\Release\Box2D.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\Release\WebP.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Bullet\Release\Bullet.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LibCpuId\Release\LibCpuId.lib;C:\Users\Owner\Development\Urho3D\CMake\Modules\GetUrhoRevision.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Owner\Development\Urho3D\Source\Urho3D\librevision.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd C:\Users\Owner\Development\Urho3D
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DFILENAME=C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new -P CMake/Modules/GetUrhoRevision.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E remove C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Owner/Development/Urho3D/CMakeFiles/d02dae36c91f2d815d5bd4aaf9435480/librevision.h.rule;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\FreeType\RelWithDebInfo\FreeType.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\JO\RelWithDebInfo\JO.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\RelWithDebInfo\LZ4.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\PugiXml\RelWithDebInfo\PugiXml.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\SDL\RelWithDebInfo\SDL.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\StanHull\RelWithDebInfo\StanHull.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\RelWithDebInfo\AngelScript.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\RelWithDebInfo\Lua.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\RelWithDebInfo\toluapp.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Civetweb\RelWithDebInfo\Civetweb.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\kNet\RelWithDebInfo\kNet.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\ik\RelWithDebInfo\ik.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Detour\RelWithDebInfo\Detour.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourCrowd\RelWithDebInfo\DetourCrowd.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourTileCache\RelWithDebInfo\DetourTileCache.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Recast\RelWithDebInfo\Recast.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Box2D\RelWithDebInfo\Box2D.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\RelWithDebInfo\WebP.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Bullet\RelWithDebInfo\Bullet.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LibCpuId\RelWithDebInfo\LibCpuId.lib;C:\Users\Owner\Development\Urho3D\CMake\Modules\GetUrhoRevision.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Owner\Development\Urho3D\Source\Urho3D\librevision.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd C:\Users\Owner\Development\Urho3D
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DFILENAME=C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new -P CMake/Modules/GetUrhoRevision.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E remove C:/Users/Owner/Development/Urho3D/Source/Urho3D/librevision.h.new
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Owner/Development/Urho3D/CMakeFiles/d02dae36c91f2d815d5bd4aaf9435480/librevision.h.rule;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\FreeType\Debug\FreeType.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\JO\Debug\JO.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LZ4\Debug\LZ4.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\PugiXml\Debug\PugiXml.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\SDL\Debug\SDL.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\StanHull\Debug\StanHull.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\AngelScript\Debug\AngelScript.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Lua\Debug\Lua.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\toluapp\src\lib\Debug\toluapp.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Civetweb\Debug\Civetweb.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\kNet\Debug\kNet.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\ik\Debug\ik.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Detour\Debug\Detour.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourCrowd\Debug\DetourCrowd.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\DetourTileCache\Debug\DetourTileCache.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Recast\Debug\Recast.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Box2D\Debug\Box2D.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\WebP\Debug\WebP.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\Bullet\Debug\Bullet.lib;C:\Users\Owner\Development\Urho3D\Source\ThirdParty\LibCpuId\Debug\LibCpuId.lib;C:\Users\Owner\Development\Urho3D\CMake\Modules\GetUrhoRevision.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Owner\Development\Urho3D\Source\Urho3D\librevision.h</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -3170,6 +3170,230 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\AudioLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\CoreLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\EngineLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\GraphicsLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\IKLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\IOLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\InputLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\LuaScriptLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\MathLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\NavigationLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\NetworkLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\PhysicsLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\ResourceLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\SceneLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\UILuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\Urho2DLuaAPI.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h;Precompiled.h</ForcedIncludeFiles>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
@@ -5225,235 +5449,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\Urho3D.h" />
     <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\Urho3DAll.h" />
     <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\librevision.h" />
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\AudioLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\CoreLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\EngineLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\GraphicsLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\IKLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\IOLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\InputLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\LuaScriptLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\MathLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\NavigationLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\NetworkLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\PhysicsLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\ResourceLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\SceneLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\UILuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\LuaScript\generated\Urho2DLuaAPI.cpp">
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</ForcedIncludeFiles>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Gltf\Gltf.vcxproj">
-      <Project>{dd6488c5-e640-416d-a350-de59fa9f4b8a}</Project>
-    </ProjectReference>
     <ProjectReference Include="C:\Users\Owner\Development\Urho3D\ZERO_CHECK.vcxproj">
       <Project>{18305C6E-FDB4-3D73-9B32-DD0358D7C67E}</Project>
       <Name>ZERO_CHECK</Name>

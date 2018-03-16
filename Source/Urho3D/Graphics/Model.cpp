@@ -110,8 +110,12 @@ bool Model::BeginLoad(Deserializer& source)
             vertexBuffers_.Clear();
             indexBuffers_.Clear();
 
-            for (const auto gltfMesh : gltfModel.meshes)
+            for (const auto gltfNode : gltfModel.nodes)
             {
+                if (gltfNode.mesh == -1) continue;
+
+                auto gltfMesh = gltfModel.meshes.at(gltfNode.mesh);
+
                 GltfHelper::Primitive primitive;
 
                 // TODO: The .bin file should already be layed out for copying into the vertex/index buffers. So we may not need to read them.
@@ -186,7 +190,13 @@ bool Model::BeginLoad(Deserializer& source)
                         {
                             auto vertex = primitive.Vertices.at(i);
 
-                            Vector3 pos{ vertex.Position.x, vertex.Position.y, vertex.Position.z };
+                            vertex.Position.x += gltfNode.translation.at(0);
+                            vertex.Position.y += gltfNode.translation.at(1);
+                            vertex.Position.z += gltfNode.translation.at(2);
+
+                            Vector3 pos{ vertex.Position.x + (float) gltfNode.translation.at(0), 
+                                vertex.Position.y + (float) gltfNode.translation.at(1),
+                                vertex.Position.z + (float) gltfNode.translation.at(2) };
                             Vector3 normal{ vertex.Normal.x, vertex.Normal.y, vertex.Normal.z };
                             Vector4 tangent{ vertex.Tangent.x, vertex.Tangent.y, vertex.Tangent.z, vertex.Tangent.w };
                             Vector2 texcoord{ vertex.TexCoord0.x, vertex.TexCoord0.y };
@@ -319,52 +329,6 @@ bool Model::BeginLoad(Deserializer& source)
 
                     geometries_.Push(geometryLodLevels);
                 }
-
-                // Read morphs
-                /*unsigned numMorphs = source.ReadUInt();
-                morphs_.Reserve(numMorphs);
-                for (unsigned i = 0; i < numMorphs; ++i)
-                {
-                    ModelMorph newMorph;
-
-                    newMorph.name_ = source.ReadString();
-                    newMorph.nameHash_ = newMorph.name_;
-                    newMorph.weight_ = 0.0f;
-                    unsigned numBuffers = source.ReadUInt();
-
-                    for (unsigned j = 0; j < numBuffers; ++j)
-                    {
-                        VertexBufferMorph newBuffer;
-                        unsigned bufferIndex = source.ReadUInt();
-
-                        newBuffer.elementMask_ = source.ReadUInt();
-                        newBuffer.vertexCount_ = source.ReadUInt();
-
-                        // Base size: size of each vertex index
-                        unsigned vertexSize = sizeof(unsigned);
-                        // Add size of individual elements
-                        if (newBuffer.elementMask_ & MASK_POSITION)
-                            vertexSize += sizeof(Vector3);
-                        if (newBuffer.elementMask_ & MASK_NORMAL)
-                            vertexSize += sizeof(Vector3);
-                        if (newBuffer.elementMask_ & MASK_TANGENT)
-                            vertexSize += sizeof(Vector3);
-                        newBuffer.dataSize_ = newBuffer.vertexCount_ * vertexSize;
-                        newBuffer.morphData_ = new unsigned char[newBuffer.dataSize_];
-
-                        source.Read(&newBuffer.morphData_[0], newBuffer.vertexCount_ * vertexSize);
-
-                        newMorph.buffers_[bufferIndex] = newBuffer;
-                        memoryUse += sizeof(VertexBufferMorph) + newBuffer.vertexCount_ * vertexSize;
-                    }
-
-                    morphs_.Push(newMorph);
-                    memoryUse += sizeof(ModelMorph);
-                }
-
-                // Read skeleton
-                skeleton_.Load(source);
-                memoryUse += skeleton_.GetNumBones() * sizeof(Bone);*/
 
                 // Read bounding box
                 boundingBox_ = BoundingBox{ Vector3{-1, -1, -1}, Vector3{1, 1, 1} }; //source.ReadBoundingBox();

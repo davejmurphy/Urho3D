@@ -323,8 +323,6 @@ void StaticModel::ApplyMaterialList(const String& fileName)
 
         ++index;
     }
-
-    //auto thing = cache->GetResource<Technique>("pathname");
 }
 
 void StaticModel::ApplyGltfMaterials(const String& fileName)

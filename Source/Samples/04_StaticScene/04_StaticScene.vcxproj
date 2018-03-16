@@ -67,7 +67,7 @@
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)../../../External;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Owner\Development\Urho3D\External;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -304,9 +304,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <None Include="C:\Users\Owner\Development\Urho3D\bin\Data" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Gltf\Gltf.vcxproj">
-      <Project>{dd6488c5-e640-416d-a350-de59fa9f4b8a}</Project>
-    </ProjectReference>
     <ProjectReference Include="C:\Users\Owner\Development\Urho3D\ZERO_CHECK.vcxproj">
       <Project>{18305C6E-FDB4-3D73-9B32-DD0358D7C67E}</Project>
       <Name>ZERO_CHECK</Name>
