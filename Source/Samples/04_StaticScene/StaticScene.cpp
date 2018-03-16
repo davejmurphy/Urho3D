@@ -183,11 +183,14 @@ void StaticScene::CreateScene()
 
         staticModel->SetModel(model);
         
-        auto material = cache->GetResource<Material>("Materials/Jack.xml");
-
-        auto gltfMaterial = mesh.primitives;
+        SharedPtr<Material> material(new Material(context_));
+        //auto material = cache->GetResource<Material>("Materials/Jack.xml");
+        material->SetTechnique(0, cache->GetResource<Technique>("Techniques/NoTexture.xml"));
+        auto matIndex = mesh.primitives.at(0).material;
+        auto mat = gltfModel.materials.at(matIndex);
+        auto baseColor = mat.values["baseColorFactor"].number_array;
         
-        material->SetShaderParameter("MatDiffColor", Vector4(1, 0, 0, 1));
+        material->SetShaderParameter("MatDiffColor", Vector4(baseColor.at(0), baseColor.at(1), baseColor.at(2), 1));
 
         staticModel->SetMaterial(material);
 
@@ -209,6 +212,7 @@ void StaticScene::CreateScene()
     lightNode->SetDirection(Vector3(0.6f, -1.0f, 0.8f)); // The direction vector does not need to be normalized
     Light* light = lightNode->CreateComponent<Light>();
     light->SetLightType(LIGHT_DIRECTIONAL);
+    light->SetBrightness(2);
 
     lightNode = scene_->CreateChild("DirectionalLight");
     lightNode->SetDirection(Vector3(-0.6f, 1.0f, -0.8f)); // The direction vector does not need to be normalized
