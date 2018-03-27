@@ -5159,6 +5159,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Precompiled.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Precompiled.h.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
+    <ClCompile Include="Graphics\VideoPlayer.cpp" />
     <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\AngelScript\APITemplates.h" />
     <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\AngelScript\Addons.h" />
     <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\AngelScript\Script.h" />
@@ -5449,6 +5450,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\Urho3D.h" />
     <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\Urho3DAll.h" />
     <ClInclude Include="C:\Users\Owner\Development\Urho3D\Source\Urho3D\librevision.h" />
+    <ClInclude Include="Graphics\VideoPlayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\Owner\Development\Urho3D\ZERO_CHECK.vcxproj">

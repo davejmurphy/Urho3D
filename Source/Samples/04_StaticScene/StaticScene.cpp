@@ -43,6 +43,7 @@
 #include "../Gltf/GltfHelper.h"
 
 #include "StaticScene.h"
+#include "VideoPlayer.h"
 
 #include <Urho3D/DebugNew.h>
 
@@ -92,6 +93,28 @@ void StaticScene::CreateScene()
     std::string errorMessage;
     tinygltf::TinyGLTF loader;
 
+    // Screen
+    {
+        Node* screenNode = scene_->CreateChild("Screen");
+        screenNode->SetPosition(Vector3(0.0f, 10.0f, -0.27f));
+        screenNode->SetRotation(Quaternion(-90.0f, 0.0f, 0.0f));
+        screenNode->SetScale(Vector3(26.67f, 0.0f, 15.0f));
+        StaticModel* screenObject = screenNode->CreateComponent<StaticModel>();
+        screenObject->SetModel(cache->GetResource<Model>("Models/Plane.mdl"));
+
+        VideoPlayer* videoPlayer = new VideoPlayer(context_);
+        screenNode->AddComponent(videoPlayer, 1234, CreateMode::LOCAL);
+        videoPlayer->SetSource("C:\\Users\\Owner\\Development\\Urho3D\\bin\\Data\\Videos\\Bunny.mp4");
+        videoPlayer->SetGenerateMipmaps(true);
+        videoPlayer->Play();
+
+        SharedPtr<Material> screenMaterial(new Material(context_));
+        screenMaterial->SetTechnique(0, cache->GetResource<Technique>("Techniques/DiffUnlit.xml"));
+        screenMaterial->SetTexture(TU_DIFFUSE, videoPlayer->GetTexture());
+        screenMaterial->SetDepthBias(BiasParameters(-0.00001f, 0.0f));
+        screenObject->SetMaterial(screenMaterial); //cache->GetResource<Material>("Materials/Mushroom.xml"));
+    }
+
     bool isLoaded = loader.LoadASCIIFromFile(&gltfModel, &errorMessage, std::string("C:/Users/Owner/Development/Urho3D/bin/Data/Models/TAPV/TAPV.gltf"));
     if (!isLoaded)
     {
@@ -112,9 +135,11 @@ void StaticScene::CreateScene()
 
         Node* node = tankroot->CreateChild(String(gltfNode.name.c_str()));
 
-        node->SetPosition(Vector3(gltfNode.translation.at(0), gltfNode.translation.at(1), gltfNode.translation.at(2)));
+        // Need to flip the z-axis to convert from the right-handed system.
+        node->SetPosition(Vector3(gltfNode.translation.at(0), gltfNode.translation.at(1), -gltfNode.translation.at(2)));
         node->SetScale(Vector3(gltfNode.scale.at(0), gltfNode.scale.at(1), gltfNode.scale.at(2)));
-        //node->SetRotation(Quaternion(gltfNode.rotation.at(0), gltfNode.rotation.at(1), gltfNode.rotation.at(2), gltfNode.rotation.at(3)));
+        // TODO: Figure out the correct rotation change for right to left handed.
+        node->SetRotation(Quaternion(gltfNode.rotation.at(3), gltfNode.rotation.at(0), gltfNode.rotation.at(1), gltfNode.rotation.at(2)));
 
         auto staticModel = node->CreateComponent<StaticModel>();
         
@@ -214,10 +239,10 @@ void StaticScene::CreateScene()
     light->SetLightType(LIGHT_DIRECTIONAL);
     light->SetBrightness(2);
 
-    lightNode = scene_->CreateChild("DirectionalLight");
-    lightNode->SetDirection(Vector3(-0.6f, 1.0f, -0.8f)); // The direction vector does not need to be normalized
-    light = lightNode->CreateComponent<Light>();
-    light->SetLightType(LIGHT_DIRECTIONAL);
+    //lightNode = scene_->CreateChild("DirectionalLight");
+    //lightNode->SetDirection(Vector3(-0.6f, 1.0f, -0.8f)); // The direction vector does not need to be normalized
+    //light = lightNode->CreateComponent<Light>();
+    //light->SetLightType(LIGHT_DIRECTIONAL);
 
     // Create more StaticModel objects to the scene, randomly positioned, rotated and scaled. For rotation, we construct a
     // quaternion from Euler angles where the Y angle (rotation about the Y axis) is randomized. The mushroom model contains

@@ -213,6 +213,7 @@ void Sample::CreateConsoleAndDebugHud()
     // Create debug HUD.
     DebugHud* debugHud = engine_->CreateDebugHud();
     debugHud->SetDefaultStyle(xmlFile);
+    debugHud->ToggleAll();
 }
 
 
