@@ -61,4 +61,6 @@ private:
     void SubscribeToEvents();
     /// Handle the logic update event.
     void HandleUpdate(StringHash eventType, VariantMap& eventData);
+
+    void LoadNode(Node& parent, tinygltf::Model& gltfModel, const int parentId);
 };

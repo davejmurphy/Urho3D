@@ -77,6 +77,200 @@ void StaticScene::Start()
     Sample::InitMouseMode(MM_RELATIVE);
 }
 
+void StaticScene::LoadNode(Node& parent, tinygltf::Model& gltfModel, const int parentId)
+{
+    ResourceCache* cache = GetSubsystem<ResourceCache>();
+
+    auto gltfNode = gltfModel.nodes.at(parentId);
+
+    if (gltfNode.name == "ArrowX1")
+    {
+        OutputDebugString("Test");
+    }
+
+    auto node = parent.CreateChild();
+
+    // Add the current gltf node to the urho node.
+    if (gltfNode.matrix.size() == 16)
+    {
+        Matrix3x4 matrix;
+        matrix = Matrix3x4::IDENTITY;
+        matrix.m00_ = gltfNode.matrix.at(0);
+        matrix.m01_ = gltfNode.matrix.at(4);
+        matrix.m02_ = gltfNode.matrix.at(8);
+        matrix.m03_ = gltfNode.matrix.at(12);
+        matrix.m10_ = gltfNode.matrix.at(1);
+        matrix.m11_ = gltfNode.matrix.at(5);
+        matrix.m12_ = gltfNode.matrix.at(9);
+        matrix.m13_ = gltfNode.matrix.at(13);
+        matrix.m20_ = gltfNode.matrix.at(2);
+        matrix.m21_ = gltfNode.matrix.at(6);
+        matrix.m22_ = gltfNode.matrix.at(10);
+        matrix.m23_ = gltfNode.matrix.at(14);
+
+        Vector3 position;
+        Vector3 scale;
+        Quaternion rotation;
+
+        matrix.Decompose(position, rotation, scale);
+        
+        position.z_ = -position.z_;
+
+        rotation.z_ = -rotation.z_;
+        rotation.w_ = -rotation.w_;
+
+        matrix.SetRotation(rotation.RotationMatrix());
+        matrix.SetTranslation(position);
+
+        node->SetTransform(matrix);
+    }
+    else
+    {
+        Vector3 position = Vector3::ZERO;
+        Vector3 scale = Vector3::ONE;
+        Quaternion rotation;
+
+        if (gltfNode.translation.size() == 3) // Need to check, some nodes may not have any transform defined at all
+        {
+            // Need to flip the z-axis to convert from the right-handed system.
+            //node->SetPosition(Vector3(gltfNode.translation.at(0), gltfNode.translation.at(1), gltfNode.translation.at(2)));
+            position = (Vector3(gltfNode.translation.at(0), gltfNode.translation.at(1), -gltfNode.translation.at(2)));
+        }
+        if (gltfNode.scale.size() == 3) // Need to check, some nodes may not have any transform defined at all
+        {
+            //node->SetScale(Vector3(gltfNode.scale.at(0), gltfNode.scale.at(1), gltfNode.scale.at(2)));
+            scale = (Vector3(gltfNode.scale.at(0), gltfNode.scale.at(1), gltfNode.scale.at(2)));
+        }
+        if (gltfNode.rotation.size() == 4) // Need to check, some nodes may not have any transform defined at all
+        {
+            // TODO: Figure out the correct rotation change for right to left handed.
+            //node->SetRotation(Quaternion(gltfNode.rotation.at(3), gltfNode.rotation.at(0), gltfNode.rotation.at(1), gltfNode.rotation.at(2)));
+            rotation = (Quaternion(-gltfNode.rotation.at(3), gltfNode.rotation.at(0), gltfNode.rotation.at(1), -gltfNode.rotation.at(2)));
+        }
+
+        Matrix3x4 matrix;
+        matrix = Matrix3x4::IDENTITY;
+        matrix.SetRotation(rotation.RotationMatrix().Scaled(scale));
+        matrix.SetTranslation(position);
+        //(position, rotation, scale);
+
+        /*matrix.m02_ = -matrix.m02_;
+        matrix.m12_ = -matrix.m12_;
+        matrix.m20_ = -matrix.m20_;
+        matrix.m21_ = -matrix.m21_;
+        matrix.m22_ = -matrix.m22_;
+        matrix.m23_ = -matrix.m23_;*/
+
+        node->SetTransform(matrix);
+    }
+
+    // Add the mesh if there is one.
+    if (gltfNode.mesh != -1)
+    {
+        auto staticModel = node->CreateComponent<StaticModel>();
+
+        SharedPtr<Model> model(new Model(context_));
+        SharedPtr<VertexBuffer> vb(new VertexBuffer(context_));
+        SharedPtr<IndexBuffer> ib(new IndexBuffer(context_));
+        SharedPtr<Geometry> geom(new Geometry(context_));
+
+        // Now load the vertex buffer for this model
+        auto mesh = gltfModel.meshes.at(gltfNode.mesh);
+        auto primitive = mesh.primitives.at(0); //TODO: handle case with more than one primitive
+
+        if (mesh.primitives.size() > 1) {
+            auto thing = mesh.primitives.at(1);
+        }
+
+        auto helperPrimitive = GltfHelper::ReadPrimitive(gltfModel, primitive);
+
+        const auto numVertices = helperPrimitive.Vertices.size();
+        const auto numIndices = helperPrimitive.Indices.size();
+        std::vector<float> vertices;
+        vertices.resize(12 * numVertices);
+        auto count = 0;
+
+        // TODO: Instead of loading the vertices from the helper primitive, load them from the buffer directly
+        // primitives contain the index of the accessor that reads the data.
+
+        for (auto vertex : helperPrimitive.Vertices)
+        {
+            vertices[count++] = vertex.Position.x;
+            vertices[count++] = vertex.Position.y;
+            vertices[count++] = -vertex.Position.z;
+            vertices[count++] = vertex.Normal.x;
+            vertices[count++] = vertex.Normal.y;
+            vertices[count++] = -vertex.Normal.z;
+            vertices[count++] = vertex.Tangent.x;
+            vertices[count++] = vertex.Tangent.y;
+            vertices[count++] = -vertex.Tangent.z;
+            vertices[count++] = vertex.Tangent.w;
+            vertices[count++] = vertex.TexCoord0.x;
+            vertices[count++] = vertex.TexCoord0.y;
+        }
+
+        float* vertexData = (float*)&vertices[0];
+
+        // Need to change winding order on the indices
+        auto indexData = &helperPrimitive.Indices[0];
+
+        for (int i = 0; i < numIndices; i += 3)
+        {
+            std::swap(indexData[i], indexData[i + 1]);
+        }
+
+        vb->SetShadowed(true);
+        PODVector<VertexElement> elements;
+        elements.Push(VertexElement(TYPE_VECTOR3, SEM_POSITION));
+        elements.Push(VertexElement(TYPE_VECTOR3, SEM_NORMAL));
+        elements.Push(VertexElement(TYPE_VECTOR2, SEM_TEXCOORD));
+        elements.Push(VertexElement(TYPE_VECTOR4, SEM_TANGENT));
+
+        vb->SetSize(numVertices, elements);
+        vb->SetData((void*)vertexData);
+
+        // Then load the index buffer for this
+        ib->SetShadowed(true);
+        ib->SetSize(numIndices, true);
+        ib->SetData(indexData);
+
+        geom->SetVertexBuffer(0, vb);
+        geom->SetIndexBuffer(ib);
+        geom->SetDrawRange(TRIANGLE_LIST, 0, numIndices);
+
+        model->SetNumGeometries(1);
+        model->SetGeometry(0, 0, geom);
+
+        // The bounding box should be set by the min max property on the position accessor
+        // TODO: This may not be right yet.
+        auto accessorIndex = primitive.attributes.at("POSITION");
+        auto posAccessor = gltfModel.accessors.at(accessorIndex);
+        Vector3 maximum(posAccessor.maxValues.at(0), posAccessor.maxValues.at(1), -posAccessor.maxValues.at(2));
+        Vector3 minimum(posAccessor.minValues.at(0), posAccessor.minValues.at(1), -posAccessor.minValues.at(2));
+
+        model->SetBoundingBox(BoundingBox(minimum, maximum));
+
+        staticModel->SetModel(model);
+
+        SharedPtr<Material> material(new Material(context_));
+
+        material->SetTechnique(0, cache->GetResource<Technique>("Techniques/NoTexture.xml"));
+        auto matIndex = mesh.primitives.at(0).material;
+        auto mat = gltfModel.materials.at(matIndex);
+        auto baseColor = mat.values["baseColorFactor"].number_array;
+
+        material->SetShaderParameter("MatDiffColor", Vector4(baseColor.at(0), baseColor.at(1), baseColor.at(2), 1));
+
+        staticModel->SetMaterial(material);
+    }
+    
+    // Then recurse on the child nodes.
+    for (auto nodeId : gltfNode.children)
+    {
+        LoadNode(*node, gltfModel, nodeId);
+    }
+}
+
 void StaticScene::CreateScene()
 {
     ResourceCache* cache = GetSubsystem<ResourceCache>();
@@ -115,7 +309,7 @@ void StaticScene::CreateScene()
         screenObject->SetMaterial(screenMaterial); //cache->GetResource<Material>("Materials/Mushroom.xml"));
     }
 
-    bool isLoaded = loader.LoadASCIIFromFile(&gltfModel, &errorMessage, std::string("C:/Users/Owner/Development/Urho3D/bin/Data/Models/TAPV/TAPV.gltf"));
+    bool isLoaded = loader.LoadASCIIFromFile(&gltfModel, &errorMessage, std::string("C:/Users/Owner/Development/Urho3D/bin/Data/Models/Orientation/OrientationTest.gltf"));
     if (!isLoaded)
     {
         const auto msg = "Failed to load gltf model" + errorMessage;
@@ -123,9 +317,20 @@ void StaticScene::CreateScene()
     }
 
     // Do loading of the tank, most other models will have recursive structure, the tank doesn't.
-    Node* tankroot = scene_->CreateChild("tankroot");
-    tankroot->SetPosition(Vector3(0.0f, 0.0f, 3.0f));
+    Node* modelRoot = scene_->CreateChild("tankroot");
+    modelRoot->SetPosition(Vector3(0.0f, 0.0f, 3.0f));
+    //modelRoot->SetScale(0.01f);
     
+    const int defaultSceneId = (gltfModel.defaultScene == -1) ? 0 : gltfModel.defaultScene;
+    const tinygltf::Scene& defaultScene = gltfModel.scenes.at(defaultSceneId);
+
+    // Process the root scene nodes. The children will be processed recursively.
+    for (const int rootNodeId : defaultScene.nodes)
+    {
+        LoadNode(*modelRoot, gltfModel, rootNodeId);
+    }
+
+    /**
     for (auto gltfNode : gltfModel.nodes)
     {
         if (gltfNode.mesh == -1)
@@ -133,13 +338,34 @@ void StaticScene::CreateScene()
             continue;
         }
 
-        Node* node = tankroot->CreateChild(String(gltfNode.name.c_str()));
+        Node* node = modelRoot->CreateChild(String(gltfNode.name.c_str()));
 
-        // Need to flip the z-axis to convert from the right-handed system.
-        node->SetPosition(Vector3(gltfNode.translation.at(0), gltfNode.translation.at(1), -gltfNode.translation.at(2)));
-        node->SetScale(Vector3(gltfNode.scale.at(0), gltfNode.scale.at(1), gltfNode.scale.at(2)));
-        // TODO: Figure out the correct rotation change for right to left handed.
-        node->SetRotation(Quaternion(gltfNode.rotation.at(3), gltfNode.rotation.at(0), gltfNode.rotation.at(1), gltfNode.rotation.at(2)));
+        if (gltfNode.matrix.size() == 16)
+        {
+            Matrix3x4 matrix;
+            matrix.m00_ = gltfNode.matrix.at(0);
+            matrix.m01_ = gltfNode.matrix.at(1);
+            matrix.m02_ = gltfNode.matrix.at(2);
+            matrix.m03_ = gltfNode.matrix.at(3);
+            matrix.m10_ = gltfNode.matrix.at(4);
+            matrix.m11_ = gltfNode.matrix.at(5);
+            matrix.m12_ = gltfNode.matrix.at(6);
+            matrix.m13_ = gltfNode.matrix.at(7);
+            matrix.m20_ = gltfNode.matrix.at(8);
+            matrix.m21_ = gltfNode.matrix.at(9);
+            matrix.m22_ = gltfNode.matrix.at(10);
+            matrix.m23_ = gltfNode.matrix.at(11);
+            
+            node->SetTransform(matrix);
+        }
+        else if (gltfNode.translation.size() == 3) // Need to check, some nodes may not have any transform defined at all
+        {
+            // Need to flip the z-axis to convert from the right-handed system.
+            node->SetPosition(Vector3(gltfNode.translation.at(0), gltfNode.translation.at(1), -gltfNode.translation.at(2)));
+            node->SetScale(Vector3(gltfNode.scale.at(0), gltfNode.scale.at(1), gltfNode.scale.at(2)));
+            // TODO: Figure out the correct rotation change for right to left handed.
+            node->SetRotation(Quaternion(gltfNode.rotation.at(3), gltfNode.rotation.at(0), gltfNode.rotation.at(1), gltfNode.rotation.at(2)));
+        } 
 
         auto staticModel = node->CreateComponent<StaticModel>();
         
@@ -164,6 +390,9 @@ void StaticScene::CreateScene()
         vertices.resize(12 * numVertices);
         auto count = 0;
 
+        // TODO: Instead of loading the vertices from the helper primitive, load them from the buffer directly
+        // primitives contain the index of the accessor that reads the data.
+        
         for (auto vertex : helperPrimitive.Vertices)
         {
             vertices[count++] = vertex.Position.x;
@@ -180,7 +409,7 @@ void StaticScene::CreateScene()
             vertices[count++] = vertex.TexCoord0.y;
         }
 
-        auto vertexData = &vertices[0];
+        float* vertexData = (float*)&vertices[0];
 
         auto indexData = &helperPrimitive.Indices[0];
 
@@ -188,10 +417,11 @@ void StaticScene::CreateScene()
         PODVector<VertexElement> elements;
         elements.Push(VertexElement(TYPE_VECTOR3, SEM_POSITION));
         elements.Push(VertexElement(TYPE_VECTOR3, SEM_NORMAL));
-        elements.Push(VertexElement(TYPE_VECTOR4, SEM_TANGENT));
         elements.Push(VertexElement(TYPE_VECTOR2, SEM_TEXCOORD));
+        elements.Push(VertexElement(TYPE_VECTOR4, SEM_TANGENT));
+        
         vb->SetSize(numVertices, elements);
-        vb->SetData(vertexData);
+        vb->SetData((void*)vertexData);
 
         // Then load the index buffer for this
         ib->SetShadowed(true);
@@ -204,12 +434,16 @@ void StaticScene::CreateScene()
 
         model->SetNumGeometries(1);
         model->SetGeometry(0, 0, geom);
+
+        // The bounding box should be set by the min max property on the position accessor
+
+
         model->SetBoundingBox(BoundingBox(Vector3(-2.0f, -2.0f, -2.0f), Vector3(2.5f, 2.5f, 2.5f)));
 
         staticModel->SetModel(model);
         
         SharedPtr<Material> material(new Material(context_));
-        //auto material = cache->GetResource<Material>("Materials/Jack.xml");
+
         material->SetTechnique(0, cache->GetResource<Technique>("Techniques/NoTexture.xml"));
         auto matIndex = mesh.primitives.at(0).material;
         auto mat = gltfModel.materials.at(matIndex);
@@ -220,6 +454,7 @@ void StaticScene::CreateScene()
         staticModel->SetMaterial(material);
 
     }
+    */
 
     // Create a child scene node (at world origin) and a StaticModel component into it. Set the StaticModel to show a simple
     // plane mesh with a "stone" material. Note that naming the scene nodes is optional. Scale the scene node larger
@@ -239,10 +474,10 @@ void StaticScene::CreateScene()
     light->SetLightType(LIGHT_DIRECTIONAL);
     light->SetBrightness(2);
 
-    //lightNode = scene_->CreateChild("DirectionalLight");
-    //lightNode->SetDirection(Vector3(-0.6f, 1.0f, -0.8f)); // The direction vector does not need to be normalized
-    //light = lightNode->CreateComponent<Light>();
-    //light->SetLightType(LIGHT_DIRECTIONAL);
+    lightNode = scene_->CreateChild("DirectionalLight");
+    lightNode->SetDirection(Vector3(-0.6f, 1.0f, -0.8f)); // The direction vector does not need to be normalized
+    light = lightNode->CreateComponent<Light>();
+    light->SetLightType(LIGHT_DIRECTIONAL);
 
     // Create more StaticModel objects to the scene, randomly positioned, rotated and scaled. For rotation, we construct a
     // quaternion from Euler angles where the Y angle (rotation about the Y axis) is randomized. The mushroom model contains
