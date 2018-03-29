@@ -201,7 +201,7 @@ void StaticScene::LoadNode(Node& parent, tinygltf::Model& gltfModel, const int p
                 vertices[count++] = vertex.Tangent.y;
                 vertices[count++] = -vertex.Tangent.z;
                 vertices[count++] = vertex.Tangent.w;
-                vertices[count++] = vertex.TexCoord0.x;
+                vertices[count++] = -vertex.TexCoord0.x;
                 vertices[count++] = vertex.TexCoord0.y;
             }
 
@@ -257,14 +257,23 @@ void StaticScene::LoadNode(Node& parent, tinygltf::Model& gltfModel, const int p
                 material->SetShaderParameter("MatDiffColor", Vector4(baseColor.at(0), baseColor.at(1), baseColor.at(2), 1));
             }
             
-            if (!mat.values["baseColorTexture"].json_double_value.empty()) 
+            const auto &gltfTextureIt = mat.values.find("baseColorTexture");
+            if (gltfTextureIt != std::end(mat.values))
             {
-                gltfModel.textures.at((int) mat.values["baseColorTexture"].json_double_value.at(0));
+                const int textureIndex = (int)gltfTextureIt->second.json_double_value.at("index");
+                
+                const tinygltf::Texture& gltfTexture = gltfModel.textures.at(textureIndex);
+                if (gltfTexture.source != -1)
+                {
+                    auto image = gltfModel.images.at(gltfTexture.source);
+                    std::string path = std::string("Models/Avocado/").append(image.uri);
 
-                std::string path = std::string("C:/Users/Owner/Development/Urho3D/bin/Data/Models/MF/").append(mat.values["baseColorTexture"].string_value);
+                    auto texture = cache->GetResource<Texture2D>(String(path.c_str()));
+                    material->SetTechnique(0, cache->GetResource<Technique>("Techniques/Diff.xml"));
+                    material->SetTexture(TextureUnit::TU_DIFFUSE, texture);
+                }
 
-                auto texture = cache->GetResource<Texture2D>(String(path.c_str()));
-                material->SetTexture(TextureUnit::TU_DIFFUSE, texture);
+                
             }
             
             
