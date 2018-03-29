@@ -250,10 +250,23 @@ void StaticScene::LoadNode(Node& parent, tinygltf::Model& gltfModel, const int p
             material->SetTechnique(0, cache->GetResource<Technique>("Techniques/NoTexture.xml"));
             auto matIndex = gltfPrimitive.material;
             auto mat = gltfModel.materials.at(matIndex);
-            auto baseColor = mat.values["baseColorFactor"].number_array;
+            
+            if (mat.values["baseColorFactor"].number_array.size() > 1) {
+                auto baseColor = mat.values["baseColorFactor"].number_array;
+                // Write the material to a list, apply them all after the loop
+                material->SetShaderParameter("MatDiffColor", Vector4(baseColor.at(0), baseColor.at(1), baseColor.at(2), 1));
+            }
+            
+            if (!mat.values["baseColorTexture"].json_double_value.empty()) 
+            {
+                gltfModel.textures.at((int) mat.values["baseColorTexture"].json_double_value.at(0));
 
-            // Write the material to a list, apply them all after the loop
-            material->SetShaderParameter("MatDiffColor", Vector4(baseColor.at(0), baseColor.at(1), baseColor.at(2), 1));
+                std::string path = std::string("C:/Users/Owner/Development/Urho3D/bin/Data/Models/MF/").append(mat.values["baseColorTexture"].string_value);
+
+                auto texture = cache->GetResource<Texture2D>(String(path.c_str()));
+                material->SetTexture(TextureUnit::TU_DIFFUSE, texture);
+            }
+            
             
             materials.push_back(material);
 
@@ -312,7 +325,7 @@ void StaticScene::CreateScene()
         screenObject->SetMaterial(screenMaterial); //cache->GetResource<Material>("Materials/Mushroom.xml"));
     }
 
-    bool isLoaded = loader.LoadASCIIFromFile(&gltfModel, &errorMessage, std::string("C:/Users/Owner/Development/Urho3D/bin/Data/Models/Buggy/Buggy.gltf"));
+    bool isLoaded = loader.LoadASCIIFromFile(&gltfModel, &errorMessage, std::string("C:/Users/Owner/Development/Urho3D/bin/Data/Models/Avocado/Avocado.gltf"));
     if (!isLoaded)
     {
         const auto msg = "Failed to load gltf model" + errorMessage;
@@ -322,8 +335,8 @@ void StaticScene::CreateScene()
     // Do loading of the tank, most other models will have recursive structure, the tank doesn't.
     Node* modelRoot = scene_->CreateChild("tankroot");
     modelRoot->SetPosition(Vector3(0.0f, 0.0f, 3.0f));
-    modelRoot->SetScale(0.01f);
-    
+    modelRoot->SetScale(1);
+
     const int defaultSceneId = (gltfModel.defaultScene == -1) ? 0 : gltfModel.defaultScene;
     const tinygltf::Scene& defaultScene = gltfModel.scenes.at(defaultSceneId);
 

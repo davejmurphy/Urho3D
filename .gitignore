@@ -111,3 +111,4 @@ Thumbs.db
 
 *.dir/
 debug/
+/bin/Data/Models/MF
