@@ -83,10 +83,14 @@ void StaticScene::LoadNode(Node& parent, tinygltf::Model& gltfModel, const int p
 
     auto gltfNode = gltfModel.nodes.at(parentId);
 
-    if (gltfNode.name == "ArrowX1")
-    {
-        OutputDebugString("Test");
-    }
+    if (gltfNode.mesh != -1) {
+        auto mesh = gltfModel.meshes.at(gltfNode.mesh);
+        auto primitive = mesh.primitives.at(0); //TODO: handle case with more than one primitive
+
+        if (mesh.name == "technic_driver_head_p_SOLIDS_1") {
+            auto thing = mesh.primitives.at(1);
+        }
+    }    
 
     auto node = parent.CreateChild();
 
@@ -152,14 +156,6 @@ void StaticScene::LoadNode(Node& parent, tinygltf::Model& gltfModel, const int p
         matrix = Matrix3x4::IDENTITY;
         matrix.SetRotation(rotation.RotationMatrix().Scaled(scale));
         matrix.SetTranslation(position);
-        //(position, rotation, scale);
-
-        /*matrix.m02_ = -matrix.m02_;
-        matrix.m12_ = -matrix.m12_;
-        matrix.m20_ = -matrix.m20_;
-        matrix.m21_ = -matrix.m21_;
-        matrix.m22_ = -matrix.m22_;
-        matrix.m23_ = -matrix.m23_;*/
 
         node->SetTransform(matrix);
     }
@@ -170,98 +166,105 @@ void StaticScene::LoadNode(Node& parent, tinygltf::Model& gltfModel, const int p
         auto staticModel = node->CreateComponent<StaticModel>();
 
         SharedPtr<Model> model(new Model(context_));
-        SharedPtr<VertexBuffer> vb(new VertexBuffer(context_));
-        SharedPtr<IndexBuffer> ib(new IndexBuffer(context_));
-        SharedPtr<Geometry> geom(new Geometry(context_));
-
+       
         // Now load the vertex buffer for this model
         auto mesh = gltfModel.meshes.at(gltfNode.mesh);
-        auto primitive = mesh.primitives.at(0); //TODO: handle case with more than one primitive
+        
+        model->SetNumGeometries(mesh.primitives.size());
+        int geometryIndex = 0;
 
-        if (mesh.primitives.size() > 1) {
-            auto thing = mesh.primitives.at(1);
-        }
+        std::vector<SharedPtr<Material>> materials;
 
-        auto helperPrimitive = GltfHelper::ReadPrimitive(gltfModel, primitive);
-
-        const auto numVertices = helperPrimitive.Vertices.size();
-        const auto numIndices = helperPrimitive.Indices.size();
-        std::vector<float> vertices;
-        vertices.resize(12 * numVertices);
-        auto count = 0;
-
-        // TODO: Instead of loading the vertices from the helper primitive, load them from the buffer directly
-        // primitives contain the index of the accessor that reads the data.
-
-        for (auto vertex : helperPrimitive.Vertices)
+        for (auto gltfPrimitive : mesh.primitives)
         {
-            vertices[count++] = vertex.Position.x;
-            vertices[count++] = vertex.Position.y;
-            vertices[count++] = -vertex.Position.z;
-            vertices[count++] = vertex.Normal.x;
-            vertices[count++] = vertex.Normal.y;
-            vertices[count++] = -vertex.Normal.z;
-            vertices[count++] = vertex.Tangent.x;
-            vertices[count++] = vertex.Tangent.y;
-            vertices[count++] = -vertex.Tangent.z;
-            vertices[count++] = vertex.Tangent.w;
-            vertices[count++] = vertex.TexCoord0.x;
-            vertices[count++] = vertex.TexCoord0.y;
+            SharedPtr<VertexBuffer> vb(new VertexBuffer(context_));
+            SharedPtr<IndexBuffer> ib(new IndexBuffer(context_));
+            SharedPtr<Geometry> geom(new Geometry(context_));
+
+            auto helperPrimitive = GltfHelper::ReadPrimitive(gltfModel, gltfPrimitive);
+
+            const auto numVertices = helperPrimitive.Vertices.size();
+            const auto numIndices = helperPrimitive.Indices.size();
+            std::vector<float> vertices;
+            vertices.resize(12 * numVertices);
+            auto count = 0;
+
+            for (auto vertex : helperPrimitive.Vertices)
+            {
+                vertices[count++] = vertex.Position.x;
+                vertices[count++] = vertex.Position.y;
+                vertices[count++] = -vertex.Position.z;
+                vertices[count++] = vertex.Normal.x;
+                vertices[count++] = vertex.Normal.y;
+                vertices[count++] = -vertex.Normal.z;
+                vertices[count++] = vertex.Tangent.x;
+                vertices[count++] = vertex.Tangent.y;
+                vertices[count++] = -vertex.Tangent.z;
+                vertices[count++] = vertex.Tangent.w;
+                vertices[count++] = vertex.TexCoord0.x;
+                vertices[count++] = vertex.TexCoord0.y;
+            }
+
+            float* vertexData = (float*)&vertices[0];
+
+            // Need to change winding order on the indices
+            auto indexData = &helperPrimitive.Indices[0];
+
+            for (int i = 0; i < numIndices; i += 3)
+            {
+                std::swap(indexData[i], indexData[i + 1]);
+            }
+
+            vb->SetShadowed(true);
+            PODVector<VertexElement> elements;
+            elements.Push(VertexElement(TYPE_VECTOR3, SEM_POSITION));
+            elements.Push(VertexElement(TYPE_VECTOR3, SEM_NORMAL));
+            elements.Push(VertexElement(TYPE_VECTOR2, SEM_TEXCOORD));
+            elements.Push(VertexElement(TYPE_VECTOR4, SEM_TANGENT));
+
+            vb->SetSize(numVertices, elements);
+            vb->SetData((void*)vertexData);
+
+            // Then load the index buffer for this
+            ib->SetShadowed(true);
+            ib->SetSize(numIndices, true);
+            ib->SetData(indexData);
+
+            geom->SetVertexBuffer(0, vb);
+            geom->SetIndexBuffer(ib);
+            geom->SetDrawRange(TRIANGLE_LIST, 0, numIndices);
+
+            model->SetGeometry(geometryIndex, 0, geom);
+
+            // The bounding box should be set by the min max property on the position accessor
+            // TODO: This may not be right yet.
+            auto accessorIndex = gltfPrimitive.attributes.at("POSITION");
+            auto posAccessor = gltfModel.accessors.at(accessorIndex);
+            Vector3 maximum(posAccessor.maxValues.at(0), posAccessor.maxValues.at(1), -posAccessor.maxValues.at(2));
+            Vector3 minimum(posAccessor.minValues.at(0), posAccessor.minValues.at(1), -posAccessor.minValues.at(2));
+
+            model->SetBoundingBox(BoundingBox(minimum, maximum));
+
+            SharedPtr<Material> material(new Material(context_));
+
+            material->SetTechnique(0, cache->GetResource<Technique>("Techniques/NoTexture.xml"));
+            auto matIndex = gltfPrimitive.material;
+            auto mat = gltfModel.materials.at(matIndex);
+            auto baseColor = mat.values["baseColorFactor"].number_array;
+
+            // Write the material to a list, apply them all after the loop
+            material->SetShaderParameter("MatDiffColor", Vector4(baseColor.at(0), baseColor.at(1), baseColor.at(2), 1));
+            
+            materials.push_back(material);
+
+            geometryIndex++;
         }
-
-        float* vertexData = (float*)&vertices[0];
-
-        // Need to change winding order on the indices
-        auto indexData = &helperPrimitive.Indices[0];
-
-        for (int i = 0; i < numIndices; i += 3)
-        {
-            std::swap(indexData[i], indexData[i + 1]);
-        }
-
-        vb->SetShadowed(true);
-        PODVector<VertexElement> elements;
-        elements.Push(VertexElement(TYPE_VECTOR3, SEM_POSITION));
-        elements.Push(VertexElement(TYPE_VECTOR3, SEM_NORMAL));
-        elements.Push(VertexElement(TYPE_VECTOR2, SEM_TEXCOORD));
-        elements.Push(VertexElement(TYPE_VECTOR4, SEM_TANGENT));
-
-        vb->SetSize(numVertices, elements);
-        vb->SetData((void*)vertexData);
-
-        // Then load the index buffer for this
-        ib->SetShadowed(true);
-        ib->SetSize(numIndices, true);
-        ib->SetData(indexData);
-
-        geom->SetVertexBuffer(0, vb);
-        geom->SetIndexBuffer(ib);
-        geom->SetDrawRange(TRIANGLE_LIST, 0, numIndices);
-
-        model->SetNumGeometries(1);
-        model->SetGeometry(0, 0, geom);
-
-        // The bounding box should be set by the min max property on the position accessor
-        // TODO: This may not be right yet.
-        auto accessorIndex = primitive.attributes.at("POSITION");
-        auto posAccessor = gltfModel.accessors.at(accessorIndex);
-        Vector3 maximum(posAccessor.maxValues.at(0), posAccessor.maxValues.at(1), -posAccessor.maxValues.at(2));
-        Vector3 minimum(posAccessor.minValues.at(0), posAccessor.minValues.at(1), -posAccessor.minValues.at(2));
-
-        model->SetBoundingBox(BoundingBox(minimum, maximum));
-
+        
         staticModel->SetModel(model);
-
-        SharedPtr<Material> material(new Material(context_));
-
-        material->SetTechnique(0, cache->GetResource<Technique>("Techniques/NoTexture.xml"));
-        auto matIndex = mesh.primitives.at(0).material;
-        auto mat = gltfModel.materials.at(matIndex);
-        auto baseColor = mat.values["baseColorFactor"].number_array;
-
-        material->SetShaderParameter("MatDiffColor", Vector4(baseColor.at(0), baseColor.at(1), baseColor.at(2), 1));
-
-        staticModel->SetMaterial(material);
+        for (int i = 0; i < materials.size(); i++) 
+        {
+            staticModel->SetMaterial(i, materials[i]);
+        }
     }
     
     // Then recurse on the child nodes.
@@ -309,7 +312,7 @@ void StaticScene::CreateScene()
         screenObject->SetMaterial(screenMaterial); //cache->GetResource<Material>("Materials/Mushroom.xml"));
     }
 
-    bool isLoaded = loader.LoadASCIIFromFile(&gltfModel, &errorMessage, std::string("C:/Users/Owner/Development/Urho3D/bin/Data/Models/Orientation/OrientationTest.gltf"));
+    bool isLoaded = loader.LoadASCIIFromFile(&gltfModel, &errorMessage, std::string("C:/Users/Owner/Development/Urho3D/bin/Data/Models/Buggy/Buggy.gltf"));
     if (!isLoaded)
     {
         const auto msg = "Failed to load gltf model" + errorMessage;
@@ -319,7 +322,7 @@ void StaticScene::CreateScene()
     // Do loading of the tank, most other models will have recursive structure, the tank doesn't.
     Node* modelRoot = scene_->CreateChild("tankroot");
     modelRoot->SetPosition(Vector3(0.0f, 0.0f, 3.0f));
-    //modelRoot->SetScale(0.01f);
+    modelRoot->SetScale(0.01f);
     
     const int defaultSceneId = (gltfModel.defaultScene == -1) ? 0 : gltfModel.defaultScene;
     const tinygltf::Scene& defaultScene = gltfModel.scenes.at(defaultSceneId);
